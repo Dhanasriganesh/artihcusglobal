@@ -29,8 +29,8 @@ function Admin() {
   };
 
   return (
-    <div className="bg-blue-400">
-      <div className="h-[90vh] overflow-hidden flex flex-col-reverse bg-black place-items-end justify-center md:justify-end md:flex-row md:place-items-start bg-cover bg-center">
+    <div className="">
+      <div className="h-[90vh] overflow-hidden flex flex-col-reverse place-items-end justify-center md:justify-end md:flex-row md:place-items-start bg-cover bg-center">
         <div className="flex-1 flex flex-col justify-center items-center bg-opacity-80 w-full md:w-fit md:h-screen pl-16 md:pl-0 pt-10 md:pt-0 m-10">
           <div className="relative bg-white bg-opacity-10 p-8 -mt-10 rounded-lg shadow-lg w-full max-w-sm mr-[2px]">
             <div className="absolute inset-0 pointer-events-none">
@@ -88,7 +88,7 @@ function Admin() {
         </div>
 
         <div className="text-center mt-10 md:mt-20 mr-2 md:mr-10">
-          <h2 className="text-lg md:text-5xl font-bold mb-1 md:mb-4 font-oleo text-white">Welcome Admin</h2>
+          <h2 className="text-lg md:text-5xl font-bold mb-1 md:mb-4 font-oleo">Welcome Admin</h2>
           <p className="flex flex-col font-bold text-blue-800 text-xs md:text-lg mb-2 md:mb-4">
             <span className="animate-pulse">Hello! Welcome back.</span>
             <span className="animate-pulse">Let's get started.</span>
