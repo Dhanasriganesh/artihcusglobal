@@ -3,7 +3,7 @@ import React from 'react'
 function Career() {
   return (
     <div>
-      Career
+      Careers
     </div>
   )
 }
