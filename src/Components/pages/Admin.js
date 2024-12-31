@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FaRegEye, FaEyeSlash } from "react-icons/fa";
+// import { FaRegEye, FaEyeSlash } from "react-icons/fa";
 
 function Admin() {
   const [email, setEmail] = useState('');
@@ -72,7 +72,7 @@ function Admin() {
                     onClick={() => setIsPasswordVisible(!isPasswordVisible)}
                     className="absolute right-3 top-1/2 transform -translate-y-1/2"
                   >
-                    {isPasswordVisible ? <FaEyeSlash /> : <FaRegEye />}
+                    {/* {isPasswordVisible ? <FaEyeSlash /> : <FaRegEye />} */}
                   </button>
                 </div>
               </div>
