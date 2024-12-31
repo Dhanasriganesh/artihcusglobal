@@ -6,6 +6,9 @@ import Banner from '../images/bannerr.jpg';
 import Services from '../HomeComponents/Services/Services'; // Import the Services component
 import Contacthome from '../HomeComponents/ContactHome/Contacthome';
 import Testimonial  from '../HomeComponents/Testimonial/Testimonial';
+import Leadership from "../HomeComponents/Leadership/Leadership"
+import Vision from "../HomeComponents/Vision/Vision"
+
 function Home() {
   return (
     <div
@@ -52,6 +55,12 @@ function Home() {
       </div>
       <div className="bg-gray-50 py-12">
         <Services /> {/* Add the Services component here */}
+      </div>
+      <div>
+        <Vision/>
+      </div>
+      <div>
+        <Leadership/>
       </div>
       <div>
         <Testimonial/>

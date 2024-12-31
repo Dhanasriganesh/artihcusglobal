@@ -1,12 +1,9 @@
 // src/Routes/Router.js
 import React from 'react';
 import { Routes, Route, Navigate } from "react-router-dom";
-import Services from '../pages/Services';
-import Sapmodules from '../pages/Sapmodules';
 import Home from '../pages/Home';
 import Contact from '../pages/Contact';
 import About from '../pages/About';
-import Industries from '../pages/Industries';
 import Career from '../Abouttypes/Career';
 import Events from '../Abouttypes/Events';
 import Blogs from '../Abouttypes/Blogs';
@@ -43,11 +40,9 @@ function Routers() {
         <Routes>
             {/* Public Routes */}
             <Route path="/" element={<Home />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/sap-modules" element={<Sapmodules />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
-            <Route path="/industries" element={<Industries />} />
+          
             
             {/* About Section Routes */}
             <Route path="/about/careers" element={<Career />} />

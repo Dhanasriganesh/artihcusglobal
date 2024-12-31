@@ -26,16 +26,22 @@ function Cards() {
       description: "Our expertise in SAP Business Technology Platform (SAP BTP) will bring enterprise data into business value, compose...",
       button: "Learn More",
     },
+    {
+      icon: "SAP",
+      title: "SAP BTP",
+      description: "Our expertise in SAP Business Technology Platform (SAP BTP) will bring enterprise data into business value, compose...",
+      button: "Learn More",
+    },
   ];
  
   return (
-    <div className="flex flex-col md:flex-row justify-between items-start px-6 md:px-12 lg:px-24 gap-x-12">
+    <div className="flex flex-col md:flex-row justify-between items-start px-6 md:px-12 lg:px-14 gap-x-12">
       {/* Left section for the cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full md:w-1/2">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full md:w-2/3 lg:w-1/3 ">
         {cardData.map((card, index) => (
           <div
             key={index}
-            className="bg-black text-white rounded-lg p-6 hover:shadow-lg hover:scale-105 transition-transform duration-300"
+            className="bg-black text-white rounded-lg p-2 hover:shadow-lg hover:scale-105 transition-transform duration-300"
           >
             <div className="flex items-center justify-start space-x-4 mb-4">
               <div className="bg-white rounded-full p-2 text-black font-bold">
