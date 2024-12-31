@@ -15,28 +15,32 @@ const Header = () => {
       'Integration Services'
     ],
     'SAP Modules': [
-      'SAP S/4HANA',
-      'SAP Business One',
-      'SAP Business ByDesign',
-      'SAP SuccessFactors'
+      'SAP EWM',
+      'SAP MFS',
+      'SAP YL',
+      'SAP TM',
+      'SAP BTP'
     ],
     Industries: [
+      'Fashion & Retail',
+      'FMCG',
+      '3PL',
+      'E-Commerce',
       'Manufacturing',
-      'Retail',
-      'Healthcare',
-      'Financial Services',
-      'Technology'
+      'Pharmaceutical',
+      'Automotive',
+      'Food & Beverage'
     ],
     About: [
-      'Company Overview',
-      'Our Team',
       'Careers',
-      'Partners'
+      'Events',
+      'News',
+      'Blogs'
     ]
   };
  
   // Dropdown component
-  const NavItem = ({ title, items, link }) => {
+  const NavItem = ({ title, items }) => {
     const [isOpen, setIsOpen] = useState(false);
  
     return (
@@ -47,8 +51,8 @@ const Header = () => {
       >
         {/* Main Link with Dropdown Arrow */}
         <Link
-          to={link || '#'}
-          className="px-3 py-2 text-orange-500 flex items-center hover:text-orange-600 transition-colors duration-200"
+          to={`/${title.toLowerCase().replace(/\s+/g, '-')}`}
+          className="px-4 py-3 text-orange-500 flex items-center hover:text-orange-600 transition-colors duration-200"
         >
           {title}
           {items && (
@@ -84,30 +88,28 @@ const Header = () => {
  
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ease-in-out bg-white bg-opacity-90 backdrop-blur-lg shadow-sm`}
+      className={`top-0 w-full z-50 transition-all duration-500 ease-in-out bg-white bg-opacity-90 backdrop-blur-lg shadow-sm`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20"> {/* Increased header height */}
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
-              <img src={logo} alt="Artihcus Global" className="h-12 w-auto" />
+              <img src={logo} alt="Artihcus Global" className="h-16 w-auto" /> {/* Increased logo size */}
             </Link>
           </div>
  
+          {/* Spacer */}
+          <div className="hidden md:block md:mr-8"></div> {/* Added gap between logo and navigation */}
+ 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-4">
+          <nav className="hidden md:flex space-x-6">
             {Object.entries(navigationItems).map(([title, items]) => (
-              <NavItem
-                key={title}
-                title={title}
-                items={items}
-                link={title === 'Services' ? '/services' : undefined} // Link for "Services"
-              />
+              <NavItem key={title} title={title} items={items} />
             ))}
             <Link
               to="/contact"
-              className="px-3 py-2 text-orange-500 hover:text-orange-600 transition-colors duration-200"
+              className="px-4 py-3 text-orange-500 hover:text-orange-600 transition-colors duration-200"
             >
               Contact
             </Link>
@@ -128,6 +130,34 @@ const Header = () => {
               </svg>
             )}
           </button>
+ 
+          {/* Social Media Icons */}
+          <div className="hidden md:flex items-center space-x-4">
+            <a
+              href="#"
+              className="p-2 text-orange-500 hover:text-orange-600 transition-colors duration-200"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+              </svg>
+            </a>
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-orange-500 hover:text-orange-600 transition-colors duration-200"
+            >
+              X
+            </a>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-orange-500 hover:text-orange-600 transition-colors duration-200"
+            >
+              in
+            </a>
+          </div>
         </div>
  
         {/* Mobile Menu */}

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Fragment } from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
@@ -8,11 +9,13 @@ function Layout() {
     
     <Router>
         
-            <Header/>
-            <div>
-                <Routers/>
-            </div>
-            <Footer/>
+            <Fragment>
+              <Header/>
+              <div>
+                  <Routers/>
+              </div>
+              <Footer/>
+            </Fragment>
         
     </Router>
   )
