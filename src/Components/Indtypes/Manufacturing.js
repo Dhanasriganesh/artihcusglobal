@@ -1,5 +1,6 @@
 import React from "react";
-
+import manufacturing from "../images/manufacturing.jpg"
+import manufacturer from "../images/Manufacturer.jpg"
 function Manufacturing() {
   return (
     <div>
@@ -13,9 +14,9 @@ function Manufacturing() {
         {/* Left Image */}
         <div className="lg:w-1/2">
           <img
-            src="https://via.placeholder.com/500x300"
+            src={manufacturing}
             alt="Manufacturing Factory"
-            className="rounded-md shadow-md"
+            className="rounded-md shadow-md w-96"
           />
         </div>
         {/* Right Content */}
@@ -56,9 +57,9 @@ function Manufacturing() {
         </ul>
         <div className="mt-8 flex justify-center">
           <img
-            src="https://via.placeholder.com/400x250"
+            src={manufacturer}
             alt="Robotic Manufacturing"
-            className="rounded-md shadow-md"
+            className="rounded-md shadow-md w-96"
           />
         </div>
       </div>

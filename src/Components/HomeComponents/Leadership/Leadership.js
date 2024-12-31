@@ -9,7 +9,6 @@ import sudhakar from '../../images/sudhakar.jpg';
 import venkatkumar from '../../images/venkat-tangirala.jpg';
 import kalyan from '../../images/kalyan-nese.jpg';
  
- 
 const ProfileCard = ({ image, name, title, onClick }) => {
   return (
     <div className="flex flex-col items-center text-center">
@@ -36,27 +35,27 @@ const Leadership = () => {
     {
       name: "C.K REDDY",
       title: "Founder CEO, and MD",
-      image: ckreddy, // Replace with actual image path
+      image: ckreddy,
     },
     {
       name: "Syama Sundara Reddy",
       title: "Director and COO",
-      image: syamareddy, // Replace with actual image path",
+      image: syamareddy,
     },
     {
       name: "Nara Muralidhar Reddy",
       title: "Founder & Director",
-      image:  narareddy, // Replace with actual image path",
+      image: narareddy,
     },
     {
       name: "Hari Reddy Andluru",
       title: "Head of SAP Competency",
-      image: harireddy, // Replace with actual image path",
+      image: harireddy,
     },
     {
       name: "Surendra Gondipalli",
       title: "President, Artihcus Global inc.",
-      image: surendra, // Replace with actual image path",
+      image: surendra,
     },
   ];
  
@@ -64,22 +63,22 @@ const Leadership = () => {
     {
       name: "Bhanu Prakash Reddy",
       title: "Advisory Board Member",
-      image: bhanureddy, // Replace with actual image path",
+      image: bhanureddy,
     },
     {
       name: "Sudhakar Amirapu",
       title: "Advisory Board Member",
-      image: sudhakar, // Replace with actual image path",
+      image: sudhakar,
     },
     {
       name: "Venkat Kumar Tangirala",
       title: "Advisory Board Member",
-      image: venkatkumar, // Replace with actual image path",
+      image: venkatkumar,
     },
     {
       name: "Kalyan Nese",
       title: "Advisory Board Member",
-      image:   kalyan, // Replace with actual image path",
+      image: kalyan,
     },
   ];
  
@@ -92,12 +91,12 @@ const Leadership = () => {
       {/* Flex Container for Leadership and Advisory Board */}
       <div className="flex flex-col lg:flex-row justify-between gap-12">
         {/* Leadership Section */}
-        <div className="flex-1 max-w-[48%]">
+        <div className="flex-1 max-w-full lg:max-w-[48%]">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-semibold mb-2">Leadership</h2>
             <div className="w-20 h-1 bg-orange-500 mx-auto"></div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
             {leadershipTeam.map((leader, index) => (
               <ProfileCard
                 key={index}
@@ -109,12 +108,12 @@ const Leadership = () => {
         </div>
  
         {/* Advisory Board Section */}
-        <div className="flex-1 max-w-[48%]">
+        <div className="flex-1 max-w-full lg:max-w-[48%]">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-semibold mb-2">Advisory Board</h2>
             <div className="w-20 h-1 bg-orange-500 mx-auto"></div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
             {advisoryBoard.map((member, index) => (
               <ProfileCard
                 key={index}
