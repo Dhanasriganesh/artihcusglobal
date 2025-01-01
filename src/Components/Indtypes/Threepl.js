@@ -2,39 +2,67 @@ import React, { useState } from "react";
 import retail_banner from "../images/3pl-banner2.jpg";
 import retail from "../images/world.jpg";
 import why_retail from "../images/carrier.jpg";
-import distribution from "../images/distribution.jpg";
-import factory from "../images/picking-area.jpg";
-import simplified from "../images/simplified.jpg";
-import car from "../images/3d.jpg";
-import deployment from "../images/deployment.jpg";
+import distribution from "../images/3pl-staffing.jpg";
+import factory from "../images/Warehouse-Capacity.jpg";
+import simplified from "../images/3pl-rm.jpg";
+import scalable from "../images/scalable.jpg"
+import infra from "../images/infra.jpg"
+import multi from "../images/multi.jpg"
+import car from "../images/change.jpg";
 import ln from "../images/ln.jpg";
 import frc from "../images/frc.jpg";
 import oe from "../images/oe.jpg";
 import sco from "../images/sco.jpg";
 import sas from "../images/sas.jpg";
 import rmd from "../images/rsm.jpg";
-
+import flowchart from "../images/flowchart.jpg"
+import smarter from "../images/smarter.jpg"
+import agility from "../images/Agility.jpg"
 function Fashion() {
   const [activeTab, setActiveTab] = useState("inbound");
 
   const tabs = {
     inbound: {
-      title: "Coordinating Inbound",
+      title: "Workforce issues",
       content:
-        "The retail store is core for multiple inbound scenarios, mainly from vendors and distribution centers. Implementing of SAP EWM in the retail Industry in the same SAP landscape, the operators can easily process the goods receipts and proceed with the put-away process without any additional repacking or relabeling activities. Upon the receipt of the packages prepared in the distribution centers, EWM can direct the goods straight from the goods receipt area to the good issue zone to fulfill supply demand.It is important for vendors to deliver to shops prior to the opening hours to solve this challenge, Dock Appointment Scheduling in EWM supports the ability to fix delivery hours for each vendor. Store Managers can therefore improve inbound planning so as to allocate the required resources to support the unloading and put-away activities.In case distribution warehouses are having to support customer returns, moving this operation into the EWM, improves the overall operation, customer experience and overall operating costs. Any stock discrepancy occurs at the receipt of goods into the store, it will be easier to book the difference against the carrier or the issuing distribution center by using the appropriate exception codes.",
+        "One of the most significant 3PL challenges is staffing. Attracting and maintaining top talent is one of the biggest issues today. 3PL providers, therefore, are under increasing pressure to invest in automation and, at the same time, must realise a quick return of investment.",
       image: distribution, // Replace with actual image path
     },
     pickingArea: {
-      title: "Managing the Picking Area",
+      title: "Warehouse Capacity/Storage space",
       content:
-        "Managing the picking area in EWM offers first, the opportunity to run the replenishment process to make stock available for the customers and secondly, to harmonize the logistics execution across all the store areas. The replenishment process can be automatically triggered based on min/max quantity, or including the customer demand (e-comm etc.), as well as manually by any store operator after a visual check of the picking locations.",
+        "One of the side effects of exponential e-commerce growth is that 3PL providers run out of space. Although real estate prices are not cheap, a 3PL that fails to offer adequate capacity risks damaging its reputation.",
       image: factory, // Replace with actual image path
     },
     pickingProcess: {
-      title: "Simplifying the Picking Process",
+      title: "Returns management",
       content:
-        "Managing the picking location in EWM is to provide a more efficient way of picking & packing e-comm orders using the “Pick by Cart and Packing” Fiori Apps.SAP S/4 HANA Retail with embedded EWM, the operators are prompted to adopt those new logistics processes in a more simplified way using the Fiori Launchpad to handle both retail and the logistics processes at the same time.",
+        "Returns in the fashion industry are the highest of all consumer returns (40-60 percent of all items purchased online are returned), putting a significant and labor-intensive demand on the 3PL provider. There are two models for returns and the setup will depend on the service level agreed with the customer – next-day, or 2-3 day delivery – and how it impacts the returns management solution.",
       image: simplified, // Replace with actual image path
+    },
+    picking: {
+      title: "Changing order profiles",
+      content:
+        "The systems employed by 3PL providers are typically designed for an order profile. Changes in the order structure profile can cause detrimental performance effects and this is challenging in conditions where the number of items per order for retail and e-commerce change all the time.",
+      image: car, // Replace with actual image path
+    },
+    pick: {
+      title: "Multi-user capability",
+      content:
+        "3PLs need to be able to serve more than one customer on the same system. Their WMS must be able to manage multiple customers for inventory, invoicing, handling and so on at the same time, whether the customer is in clothing or household appliances.",
+      image: multi, // Replace with actual image path
+    },
+    scale: {
+      title: "Scalability",
+      content:
+        "Adapting to client growth is a part of the business and scalability is a big challenge for 3PLs moving forward. 3PLs must be able to scale up and down to match the size of the 3PL operation.",
+      image: scalable, // Replace with actual image path
+    },
+    lack: {
+      title: "Lack of Infrastructure",
+      content:
+        "This is a major challenge for 3PL companies in most of the developing countries of the world. Some of the problems faced may include bad road conditions, poor connectivity, inadequate air and sea port capacities and lack of developed modes of transports such as railways, roadways and inland water transport system.",
+      image: infra, // Replace with actual image path
     },
   };
   const offerings = [
@@ -87,9 +115,9 @@ function Fashion() {
           backgroundPosition: 'center',
         }}
       >
-      <h1 className="px-36 text-4xl font">3PL (Third Party Logistics)</h1>
+        <h1 className="px-36 text-4xl font">3PL (Third Party Logistics)</h1>
         <h1 className="px-36">Welcome to the new era of e-commerce and Future-ready ecosystems. Implement innovative <span className="flex ">
-        storage solutions into your 3PL logistics operations to increased productivity and quick order </span>fulfillment. Fulfill your customer expectations with our logistics Automation solutions.</h1>
+          storage solutions into your 3PL logistics operations to increased productivity and quick order </span>fulfillment. Fulfill your customer expectations with our logistics Automation solutions.</h1>
       </div>
 
       {/* Section 2: Manufacturing Content */}
@@ -108,17 +136,16 @@ function Fashion() {
         <div className="flex-1 relative justify-center max-w-xl">
           <h2 className="text-orange-500 text-3xl font-bold mb-4">
             <span className="text-green-300 mr-2 text-5xl">:</span>
-            Automation Solutions for Retail
+            Enterprise Solutions for 3PL
           </h2>
           <p className="text-gray-600 leading-relaxed">
-            We offer the right <span className="text-orange-500 font-bold">SCM (Supply Chain Management)</span> solutions and designs for digitalization, providing secure and innovative solutions. We help you enhance the consumer experience in fashion and retail by streamlining on-the-go transactions, accelerating and simplifying the outbound process, and improving inventory management, online orders, and delivery.
+            We offer competitive SCM solutions with better digitalization to maximize space utilization and simplify 3PL Operations. We help you to improve your 3PL partner experience, on-the-go transactions that speed up and simplify the Inbound & Outbound process as well as inventory management and delivery using SAP EWM (Extended Warehouse Management) with Smart Storage Solutions. <span className="text-orange-500 font-bold">RF framework</span> support and
             <span className="text-orange-500 font-bold">SAP EWM (Extended Warehouse Management)</span> supports warehouse management, while
-            <span className="text-orange-500 font-bold"> SAP BTP</span> solutions empower
-            mobile and handheld devices for seamless operations.
+            <span className="text-orange-500 font-bold"> SAP BTP solutions</span> for Mobile and hand-held devices.
 
           </p>
-          <p className="text-justify mt-12"> The insights and customer wins from <span className="text-orange-500 font-bold">SAP EWM</span> are being incorporated into our future enterprise solutions, enhancing
-            <span className="text-orange-500 font-bold">SCM software systems</span> and supporting digital transformation initiatives to deliver success.</p>
+          <p className="text-justify mt-12">The SAP EWM (Extended Warehouse Management) customer wins learned and gathered are being incorporated in our future Enterprise solutions with
+            <span className="text-orange-500 font-bold">SCM software systems</span> and their digital transformation initiatives to bring success into the deliverables.</p>
         </div>
 
 
@@ -132,16 +159,16 @@ function Fashion() {
         <div className="flex-1 relative justify-center max-w-xl">
           <h2 className="text-orange-500 text-3xl font-bold mb-4">
             <span className="text-green-300 mr-2 text-5xl">:</span>
-            Why retailers need new technology
+            Why 3PL need to adapt new technologies
           </h2>
           <p className="text-gray-600 leading-relaxed">
-            In a typical large fashion and retail store, multiple partners interact, receiving goods from distribution centers and vendors, and managing returns from customers. These activities include picking and shipping for B2B, B2C, e-commerce, and Click and Collect orders. Ensuring goods are available quickly for customers is the primary challenge faced by store managers. By introducing solutions supported by
-            <span className="text-orange-500"> SAP EWM</span> and
-            <span className="text-orange-500"> SAP BTP</span> into fashion and retail warehousing, which integrate across their complex supply chain, retailers can overcome these challenges. This integration ensures that
-            large retailers can respond to customer demands,
-            maintain stock availability, and have the
-            resources in place to fulfill timely deliveries at a lower cost.
-
+            3PL providers are embracing
+            <span className="text-orange-500"> new technology</span> to meet Challenges with
+            <span className="text-orange-500"> flexibility, agility, and adaptation</span> in the quickly expanding industry.
+          </p>
+          <p className="mt-14">
+            particularly heightened demand in online sales may sound like business development opportunities for 3PLs. However, if they fail to provide the service that matches industry fulfilment standards, 3PLs run the risk of losing customers. To prevent this and avert competition, 3PLs need solutions that provide flexible and adaptive responses. If they invest in
+            <span className="text-orange-500">automation</span> at an early stage, their ability to grow, serve more brands and handle a higher volume of goods will sustain the investment.
           </p>
         </div>
         {/* Left Image */}
@@ -162,14 +189,15 @@ function Fashion() {
         <div className="flex-1 relative justify-center max-w-xl">
           <h2 className="text-orange-500 text-3xl font-bold mb-4">
             <span className="text-green-300 mr-2 text-5xl">:</span>
-            How SAP EWM resolves 3 <span className="">challenges</span> facing by retailers <span className="">with </span>Warehousing Management
+            Challenges faced by 3PL companies
           </h2>
 
         </div>
         {/* Left Image */}
         <div className="flex mt-6 justify-center lg:w-1/2">
           <p>
-            Retail companies have started diversifying the processes for their stores, trying to boost the transportation and the logistics operation to obtain faster deliveries.</p>
+            Third-party logistics revenue has been increasing at a rate which is double to the existing. At the same time, behind all this growth, there are quite a few challenges facing the 3PL and distribution industry.</p>
+          <p className="mt-14">In spite of the massive growth of the 3PL industry, 3PL companies face several challenges while serving customers across the globe. Some of them are listed here.</p>
         </div>
       </div>
 
@@ -179,11 +207,10 @@ function Fashion() {
         {Object.keys(tabs).map((key) => (
           <button
             key={key}
-            className={`px-4 py-2 rounded-full text-sm font-medium ${
-              activeTab === key
-                ? "bg-orange-500 text-white"
-                : "bg-gray-200 text-gray-700"
-            }`}
+            className={`px-4 py-2 rounded-full text-sm font-medium ${activeTab === key
+              ? "bg-orange-500 text-white"
+              : "bg-gray-200 text-gray-700"
+              }`}
             onClick={() => setActiveTab(key)}
           >
             {tabs[key].title}
@@ -240,6 +267,98 @@ function Fashion() {
           ))}
         </div>
       </div>
+
+
+      <div className="flex flex-col justify-center items-center sm:justify-center">
+        <h2 className="text-orange-500 text-3xl font-bold mb-4">
+          <span className="text-green-300 mr-2 text-5xl">:</span>
+          Top challenges faced by third-party logistics service providers worldwide in 2022
+        </h2>
+        <div>
+          <img src={flowchart} width={800} height={400} className="rounded-md shadow-2xl shadow-black m-4" />
+        </div>
+      </div>
+
+
+
+
+
+      <div className="px-36 py-12 lg:flex lg:space-x-8">
+        {/* Left Image */}
+        <div className="flex justify-center lg:w-1/2">
+          <img
+            src={smarter}
+            alt="Manufacturing Factory"
+            className="w-5/6"
+          />
+        </div>
+        {/* Right Content */}
+
+
+        <div className="flex-1 relative justify-center max-w-xl">
+          <h2 className="text-orange-500 text-3xl font-bold mb-4">
+            <span className="text-green-300 mr-2 text-5xl">:</span>
+            Overcome 3PL challenges with Smarter & Future ready technology
+          </h2>
+          <p className="text-gray-600 leading-relaxed">
+            Artihcus digital transformation solutions can help improve operational efficiency and provides benefits of digitalization such as increased throughput, boosted productivity, and reduced operational costs. Manual storage systems are also more easily scaled, so if the business is rapidly growing, it’s less expensive to add or reconfigure storage solutions to promote the growth. 3PL providers can overcome the challenges by leveraging the Technology solutions from Artihcus. Artihcus will transform the logistics by leveraging the principles of Enterprise in the below</p>
+        </div>
+
+
+      </div>
+
+
+      <div className="flex justify-center">
+<div>
+  <img src={agility} width={100} height={10}/>
+  Agility
+</div>
+
+      </div>
+
+
+
+      <div className="flex flex-col items-center bg-gray-200 py-10">
+      {/* Heading Section */}
+      <h2 className="text-orange-500 text-3xl font-bold mb-8 text-center">
+        <span className="text-green-300 mr-2 text-5xl">:</span>
+        Key Trends in 3PL Operations
+      </h2>
+
+      {/* Cards Section */}
+      <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-8 px-6">
+        {/* Card 1 */}
+        <div className="bg-black text-white p-6 rounded-3xl shadow-lg w-80 text-center transition transform hover:scale-105 hover:shadow-xl">
+          <p>
+            Automation of workflow using technology will bring 3PL companies closer to their clients
+            through greater collaboration electronically.
+          </p>
+        </div>
+        {/* Card 2 */}
+        <div className="bg-black text-white p-6 rounded-3xl shadow-lg w-80 text-center transition transform hover:scale-105 hover:shadow-xl">
+          <p>
+            Smarter, dedicated 3PL technology will address inefficiencies, save time, and improve ROI
+            through dedicated transport management systems, warehouse management systems, freight
+            tracking, and customer service.
+          </p>
+        </div>
+        {/* Card 3 */}
+        <div className="bg-black text-white p-6 rounded-3xl shadow-lg w-80 text-center transition transform hover:scale-105 hover:shadow-xl">
+          <p>
+            IoT and mobile applications will focus on flexibility and replace paper records, delivering
+            processing orders and sales fulfillment seamlessly regardless of geographical location.
+          </p>
+        </div>
+        {/* Card 4 */}
+        <div className="bg-black text-white p-6 rounded-3xl shadow-lg w-80 text-center transition transform hover:scale-105 hover:shadow-xl">
+          <p>
+            Data analytics of ongoing and historical information will provide greater insight into
+            building predictive business models for the future.
+          </p>
+        </div>
+      </div>
+    </div>
+
     </div>
   );
 }

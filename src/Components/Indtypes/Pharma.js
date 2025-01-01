@@ -1,106 +1,124 @@
 import React from "react";
-
-function Pharma() {
+import manufacturing from "../images/pharma.jpg"
+import manufacturer from "../images/bottle.jpg"
+import manufacturingg from "../images/bottless.jpg"
+function Manufacturing() {
   return (
     <div>
-      {/* Section 1: Manufacturing Header */}
-      <div className="bg-orange-500 text-white py-16">
-        <h1 className="text-center text-4xl font-bold">Pharmaceutical</h1>
-      </div>
+            <div
+              className="text-white py-24"
+              style={{
+                backgroundImage: `url(${manufacturing})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
+            >
+              <h1 className="px-36 text-4xl font">Pharmaceutical
+              </h1>
+        
+            </div>
 
-      {/* Section 2: Manufacturing Content */}
-      <div className="px-8 py-12 lg:flex lg:space-x-8">
-        {/* Left Image */}
-        <div className="lg:w-1/2">
-          <img
-            src="https://via.placeholder.com/500x300"
-            alt="Manufacturing Factory"
-            className="rounded-md shadow-md"
-          />
-        </div>
-        {/* Right Content */}
-        <div className="lg:w-1/2">
-          <h2 className="text-orange-500 text-3xl font-semibold mb-4">
-            Manufacturing
-          </h2>
-          <p className="text-gray-700">
-            To adapt to the digital revolution and meet today’s market demands,
-            industrial companies must create cutting-edge operational
-            ecosystems and foster supplier collaboration. This involves
-            developing intelligent solutions and platforms that reduce costs,
-            enhance service capabilities, and deliver a consistent customer
-            experience.{" "}
-            <span className="font-semibold text-gray-900">Arthicus Global</span>{" "}
-            provides solutions that help manufacturers improve performance in
-            various areas, including talent and supply chain management,
-            process automation, quality control, and more.
-          </p>
-        </div>
-      </div>
+             {/* Section 2: Manufacturing Content */}
+                  <div className="px-36 py-12 lg:flex lg:space-x-8">
+                    {/* Left Image */}
+                    <div className="flex justify-center lg:w-1/2">
+                      <img
+                        src={manufacturingg}
+                        alt="Manufacturing Factory"
+                        className="w-5/6"
+                      />
+                    </div>
+                    {/* Right Content */}
+            
+            
+                    <div className="flex-1 relative justify-center max-w-xl">
+                      <h2 className="text-orange-500 text-3xl font-bold mb-4">
+                        <span className="text-green-300 mr-2 text-5xl">:</span>
+                        Pharmaceutical
+                      </h2>
+                      <p className="text-gray-600 leading-relaxed">
+                      SAP EWM (Extended Warehouse Management) in the pharmaceutical industry enables accurate and compliant warehouse management, which is essential when handling delicate items. It supports stringent standards and traceability requirements by providing real-time inventory visibility and precise tracking through RFID and barcode scanning. </p> 
+                 <p className="mt-5">Artihcus Global has successfully implemented SAP EWM for pharmaceutical companies while adhering to pharmaceutical product serialization rules. These implementations included the integration of 
+                  <span className="text-orange-500 font-bold"> SAP Advanced Track & Trace for Pharmaceuticals (ATTP)</span>  SAP EWM offers features like batch management and serial number management, which help in inventory identification. You can seamlessly integrate SAP EWM with SAP ATTP, which provides functions that ensure compliance with country-specific legal requirements for serialization, tracking and tracing, and regulatory reporting of pharmaceutical items.
+                      </p>
+                      <p className="mt-3">
+                    For companies that rely heavily on Quality Management (QM) functionality, we specialize in incorporating EWM features such as inspection lot summary, pre-sampling in production, recurrent inspections, internal inspections, and partial lot choices.
+                    </p>
+                    </div>
+                
+            
+            
+                  </div>
 
-      {/* Section 3: Challenges Faced */}
-      <div className="bg-gray-100 py-12 px-8">
-        <h2 className="text-orange-500 text-3xl font-semibold mb-8">
-          Challenges Faced by Manufacturer
-        </h2>
-        <ul className="space-y-4 text-gray-700">
-          <li>• Achieving high efficiency in offshoring and reshoring supply chains</li>
-          <li>
-            • Building resilience in the face of geopolitical, competitive, and
-            regulatory uncertainty
-          </li>
-          <li>• Realizing the full potential of technological innovation</li>
-          <li>• Managing increasing product and supply chain complexity</li>
-          <li>• Maximizing capacity and asset utilization</li>
-          <li>• Improving staff productivity, safety, efficiency, and satisfaction</li>
-        </ul>
-        <div className="mt-8 flex justify-center">
-          <img
-            src="https://via.placeholder.com/400x250"
-            alt="Robotic Manufacturing"
-            className="rounded-md shadow-md"
-          />
-        </div>
-      </div>
 
-      {/* Section 4: Offerings */}
-      <div className="py-12 px-8">
-        <h2 className="text-orange-500 text-3xl font-semibold mb-8">
-          We Offerings
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <div>
-            <img
-              src="https://via.placeholder.com/80"
-              alt="SAP Yard Logistics"
-              className="mx-auto mb-4"
-            />
-            <h3 className="text-gray-900 font-semibold">SAP Yard Logistics</h3>
-          </div>
-          <div>
-            <img
-              src="https://via.placeholder.com/80"
-              alt="SAP Transportation Management"
-              className="mx-auto mb-4"
-            />
-            <h3 className="text-gray-900 font-semibold">
-              SAP Transportation Management
-            </h3>
-          </div>
-          <div>
-            <img
-              src="https://via.placeholder.com/80"
-              alt="SAP Extended Warehouse Management"
-              className="mx-auto mb-4"
-            />
-            <h3 className="text-gray-900 font-semibold">
-              SAP Extended Warehouse Management (EWM)
-            </h3>
-          </div>
-        </div>
-      </div>
+                     <div className="px-36 py-12 lg:flex lg:space-x-8">
+                         
+                          {/* Right Content */}
+                  
+                  
+                          <div className="flex-1 relative justify-center max-w-xl">
+                            <h2 className="text-orange-500 text-3xl font-bold mb-4">
+                              <span className="text-green-300 mr-2 text-5xl">:</span>
+                              Benefits Of SAP EWM for Pharmaceutical Industry
+                            </h2>
+                            <div className="text-gray-600 font-medium mt-5">
+                          <ul className="space-y-2 list-none">
+                            <li className="flex items-start">
+                              <span className="w-2 h-2 bg-orange-600 rounded-full mt-1 mr-3"></span>
+                              Compliance with Regulations
+                            </li>
+                            <li className="flex items-start">
+                              <span className="w-2 h-2 bg-orange-600 rounded-full mt-1 mr-3"></span>
+                              Enhanced Traceability
+                            </li>
+                            <li className="flex items-start">
+                              <span className="w-2 h-2 bg-orange-600 rounded-full mt-1 mr-3"></span>
+                              Improved Stock Accuracy
+                            </li>
+                            <li className="flex items-start">
+                              <span className="w-2 h-2 bg-orange-600 rounded-full mt-1 mr-3"></span>
+                              Efficient Storage Management
+                            </li>
+                            <li className="flex items-start">
+                              <span className="w-2 h-2 bg-orange-600 rounded-full mt-1 mr-3"></span>
+                              Streamlined Batch Release and Recall Processes
+                            </li>
+                            <li className="flex items-start">
+                              <span className="w-2 h-2 bg-orange-600 rounded-full mt-1 mr-3"></span>
+                              Quality Management Integration
+                            </li>
+                            <li className="flex items-start">
+                              <span className="w-2 h-2 bg-orange-600 rounded-full mt-1 mr-3"></span>
+                              Compliance with GMP (Good Manufacturing Practice) Requirements
+                            </li>
+                            <li className="flex items-start">
+                              <span className="w-2 h-2 bg-orange-600 rounded-full mt-1 mr-3"></span>
+                              Sample Management
+                            </li>
+                            <li className="flex items-start">
+                              <span className="w-2 h-2 bg-orange-600 rounded-full mt-1 mr-3"></span>
+                              Real-Time Monitoring and Reporting
+                            </li>
+                            <li className="flex items-start">
+                              <span className="w-2 h-2 bg-orange-600 rounded-full mt-1 mr-3"></span>
+                              Seamless ERP Integration
+                            </li>
+                          </ul>
+                        </div>
+                  
+                          </div>
+                  
+                   {/* Left Image */}
+                   <div className="flex justify-center lg:w-1/2">
+                            <img
+                              src={manufacturer}
+                              alt="Manufacturing Factory"
+                              className="w-5/6"
+                            />
+                          </div>
+                        </div>
     </div>
   );
 }
 
-export default Pharma;
+export default Manufacturing;
