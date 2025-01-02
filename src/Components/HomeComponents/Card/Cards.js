@@ -1,45 +1,50 @@
 import React from "react";
 import { Link } from "react-router-dom";
- 
+import sap60 from '../../images/sap60.svg';
+import SAPBTP from '../../images/sapbtp.svg';
+import SAPMFS from '../../images/sapmfs.svg';
+import saptm from '../../images/saptm.svg';
+import yardlogistics from '../../images/yard-logistics.svg';
+
 function Cards() {
   const cardData = [
     {
-      icon: "SAP",
+      icon: sap60,
       title: "SAP EWM",
       description: "Our modern, flexible warehouse solution you can run agile operations with digitalised and accelerated...",
       button: "Learn More",
       link: "/sap-modules/sap-ewm",
     },
     {
-      icon: "SAP",
+      icon: saptm,
       title: "SAP TM",
       description: "Our integrated transportation management solution enables you to gain the visibility and control...",
       button: "Learn More",
       link: "/sap-modules/sap-tm",
     },
     {
-      icon: "SAP",
+      icon: SAPMFS,
       title: "SAP MFS",
       description: "Our tailored solution with the built-in component SAP EWM MFS to meet individual requirements enables you...",
       button: "Learn More",
       link: "/sap-modules/sap-mfs",
     },
     {
-      icon: "SAP",
+      icon: SAPBTP,
       title: "SAP BTP",
       description: "Our expertise in SAP Business Technology Platform (SAP BTP) will bring enterprise data into business value, compose...",
       button: "Learn More",
       link: "/sap-modules/sap-btp",
     },
     {
-      icon: "SAP",
+      icon: yardlogistics,
       title: "SAP YL",
       description: "Leverage SAP Yard Logistics to streamline and optimize your yard operations...",
       button: "Learn More",
       link: "/sap-modules/sap-yl",
     },
   ];
- 
+
   return (
     <div className="flex flex-col md:flex-row justify-between items-start px-6 md:px-12 lg:px-14 gap-x-12">
       {/* Left section for the cards */}
@@ -50,9 +55,8 @@ function Cards() {
             className="bg-black text-white rounded-lg p-2 hover:shadow-lg hover:scale-105 transition-transform duration-300 w-58"
           >
             <div className="flex items-center justify-start space-x-4 mb-4">
-              <div className="bg-white rounded-full p-2 text-black font-bold">
-                {card.icon}
-              </div>
+              {/* Use img tag to display the icon */}
+              <img src={card.icon} alt={`${card.title} icon`} className="w-10 h-10" />
             </div>
             <h3 className="text-xl font-bold mb-2">{card.title}</h3>
             <hr className="border-t border-gray-600 mb-4" />
@@ -65,8 +69,7 @@ function Cards() {
           </div>
         ))}
       </div>
- 
-      {/* Right section for the text */}
+
       {/* Right section for the text */}
       <div className="relative w-full md:w-1/2 flex flex-col justify-start items-start min-h-screen mt-96 ml-56">
         {/* Combined Line Design */}
@@ -76,7 +79,7 @@ function Cards() {
           {/* Orange Line */}
           <div className="absolute bg-orange-500 h-28 w-[3px] top-16 z-10"></div> {/* Both lines start at the same position */}
         </div>
- 
+
         <h2 className="text-3xl font-bold text-orange-500 mb-4 ml-10">Modules We Offer</h2>
         <div className="text-md leading-relaxed w-full ml-10">
           <p className="mb-2">
@@ -88,5 +91,5 @@ function Cards() {
     </div>
   );
 }
- 
+
 export default Cards;

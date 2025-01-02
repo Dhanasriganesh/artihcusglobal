@@ -4,11 +4,12 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import Routers from '../Routers/Routers'
+import ScrollToTop from '../ScrollToTop'
 function Layout() {
   return (
     
     <Router>
-        
+        <ScrollToTop/>
             <Fragment>
               <Header/>
               <div>

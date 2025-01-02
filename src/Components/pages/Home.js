@@ -15,11 +15,11 @@ import Clients from '../HomeComponents/Clients/Clients';
     <div className="min-h-screen w-full">
       {/* Hero Section */}
       <div
-        className="relative w-full bg-cover bg-center min-h-[calc(75vh-64px)]"
+        className="relative w-full bg-cover bg-center min-h-[calc(75vh-64px)] bg-opacity-10"
         style={{ backgroundImage: `url(${Banner})` }}
       >
         {/* Background Overlay */}
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-black/10" />
  
         {/* Content Container */}
         <div className="relative h-full flex flex-col justify-center px-4 sm:px-6 md:px-12 lg:px-24 xl:px-36 py-12">
@@ -32,7 +32,7 @@ import Clients from '../HomeComponents/Clients/Clients';
             </p>
             <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white flex flex-wrap items-center gap-2">
               That improve{' '}
-              <span className="text-orange-500 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+              <span className="text-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
                 <Typed
                   strings={[
                     'Sustainability',

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Contact from "../images/Contact.jpg";
-import sap from "../images/sap.png";
+import sap from "../images/1.jpg";
 import shadow from "../images/shadow.png";
 import { useParams } from 'react-router-dom';
 const CornerDecoration = () => (

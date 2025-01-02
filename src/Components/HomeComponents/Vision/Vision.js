@@ -10,7 +10,7 @@ const Vision = () => {
           <div className="space-y-6 lg:space-y-8">
             {/* Title Section */}
             <div className="flex items-center gap-2">
-              <div className="w-1 h-8 bg-orange-500"></div>
+              {/* <div className="w-1 h-8 bg-orange-500"></div> */}
               <h1 className="text-3xl lg:text-4xl font-bold text-orange-500">
                 Our Vision
               </h1>
