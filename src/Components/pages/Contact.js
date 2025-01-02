@@ -1,15 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
+import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
-import contactImage from '../images/Contact.jpg'; // Adjust the path as necessary
+import contactImage from '../images/Contact.jpg';
+import ind from '../../Components/images/idnlocation.png';  // Correct import
+import usa from '../../Components/images/usalocation.png';  // Correct import
+import uae from '../../Components/images/uaelocation.png';  // Correct import
  
 function Contact() {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    number: '',
+    companyName: '',
+    country: '',
+    industry: '',
+    services: '',
+    referredBy: '',
+    referredName: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('http://localhost:5000/send-email', formData);
+      alert(response.data.message);
+    } catch (error) {
+      alert('Failed to send email. Please try again later.');
+    }
+  };
+
   return (
     <div>
       {/* Background Image Section */}
       <div
         className="w-full bg-cover bg-center"
-        style={{ backgroundImage: `url(${contactImage})`, height: `calc(50vh - 28px)` }} // Adjust 64px based on header height
+        style={{ backgroundImage: `url(${contactImage})`, height: `calc(50vh - 64px)` }} // Adjust 64px based on header height
       >
         {/* Overlay Content */}
         <div className="flex items-center justify-center h-full bg-black bg-opacity-50">
@@ -37,7 +70,7 @@ function Contact() {
  
         {/* Right Side Form Section */}
         <div className="sm:w-1/2 bg-gray-100 p-6 rounded-lg shadow-md pr-14">
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="grid grid-cols-2 gap-4 mb-4 ">
               <input
                 type="text"
@@ -74,35 +107,48 @@ function Contact() {
                 required
               >
                 <option value="">Country *</option>
-                <option value="India">India</option>
+                <option value="INDIA">INDIA</option>
                 <option value="USA">USA</option>
-                <option value="UK">UK</option>
+                <option value="UAE">UAE</option>
               </select>
               <select
                 className="border border-gray-300 p-2 rounded w-full"
                 required
               >
                 <option value="">Your Industry *</option>
-                <option value="Tech">Tech</option>
-                <option value="Health">Health</option>
-                <option value="Finance">Finance</option>
+                <option value="RETAIL">RETAIL</option>
+                <option value="FMG">FMG</option>
+                <option value="3PL">3PL</option>
+                <option value="E-COMMERCE">E-COMMERCE</option>
+                <option value="MANUFACTURING">MANUFACTURING</option>
+                <option value="PHARMACEUTICAL">PHARMACEUTICAL</option>
+                <option value="AUTOMOBILE">AUTOMOBILE</option>
               </select>
               <select
                 className="border border-gray-300 p-2 rounded w-full"
                 required
               >
                 <option value="">Services/Technologies *</option>
-                <option value="Development">Development</option>
-                <option value="Design">Design</option>
-                <option value="Marketing">Marketing</option>
+                <option value="SAP Warehousing">SAP Warehousing</option>
+                <option value="SAP EWM Upgradation">SAP EWM Upgradation</option>
+                <option value="SAP EWM Rollouts">SAP EWM Rollouts</option>
+                <option value="SAP EWM Migration">SAP EWM Migration</option>
+                <option value="SAP Automation">SAP Automation</option>
+                <option value="SAP Transportation">SAP Transportation</option>
+                <option value="Services and Support">Services and Support</option>
               </select>
               <select
                 className="border border-gray-300 p-2 rounded w-full"
                 required
               >
                 <option value="">Referred By</option>
-                <option value="Friend">Friend</option>
-                <option value="Online">Online</option>
+                <option value="Search Engine">Search Engine</option>
+                <option value="Sales Person">Sales Person</option>
+                <option value="Trade Show/Conferences">Trade Show/Conferences</option>
+                <option value="Referred by Peer">Referred by Peer</option>
+                <option value="Referred by Industry Analyst">Referred by Industry Analyst </option>
+                <option value="Corporate Connect">Corporate Connect</option>
+                <option value="Others">Others</option>
               </select>
               <input
                 type="text"
@@ -143,15 +189,17 @@ function Contact() {
           {/* Hyderabad Location */}
           <div className="bg-orange-500 text-white p-6 rounded-lg shadow-lg">
             <h3 className="text-2xl font-bold flex items-center">
-            <span className="mr-2 bg-white text-orange-500 p-2 rounded-full">
-          <FontAwesomeIcon icon={faMapMarkerAlt} />
-        </span> Hyderabad
+              <span className="mr-2 bg-white text-orange-500 p-2 rounded-full">
+                <FontAwesomeIcon icon={faMapMarkerAlt} />
+              </span>
+              Hyderabad
             </h3>
             <p className="mt-4">
               <strong>Address:</strong> Arthicus Global Private Limited <br />
               Plot No. 227 – Kartikeya Towers, 1st floor Matrusrinagar, Miyapur,
               Hyderabad, Telangana 500049, India.
             </p>
+ 
             <p className="mt-2">
               <strong>Phone:</strong> +91–40–35160930
             </p>
@@ -165,8 +213,8 @@ function Contact() {
               className="block mt-4"
             >
               <img
-                src="https://maps.googleapis.com/maps/api/staticmap?center=Hyderabad,+India&zoom=15&size=300x150&markers=color:red|label:A|Hyderabad,+India&key=YOUR_GOOGLE_MAPS_API_KEY"
-                alt="Hyderabad Map"
+                src={ind}  // Use imported image
+                alt="Hyderabad Location"
                 className="rounded-lg shadow-md"
               />
             </a>
@@ -175,10 +223,14 @@ function Contact() {
           {/* USA Location */}
           <div className="bg-orange-500 text-white p-6 rounded-lg shadow-lg">
             <h3 className="text-2xl font-bold flex items-center">
-            <span className="mr-2 bg-white text-orange-500 p-2 rounded-full">
-          <FontAwesomeIcon icon={faMapMarkerAlt} />
-        </span> USA
+              <span className="mr-2 bg-white text-orange-500 p-2 rounded-full">
+                <FontAwesomeIcon icon={faMapMarkerAlt} />
+              </span>
+              USA
             </h3>
+            <p>
+              .
+            </p>
             <p className="mt-4">
               <strong>Address:</strong> Arthicus Global Inc <br />
               6565 N MacArthur Blvd Suite 225 Irving, TX 75039, USA.
@@ -196,8 +248,8 @@ function Contact() {
               className="block mt-4"
             >
               <img
-                src="https://maps.googleapis.com/maps/api/staticmap?center=Irving,+USA&zoom=15&size=300x150&markers=color:red|label:A|6565+N+MacArthur+Blvd,+Irving,+USA&key=YOUR_GOOGLE_MAPS_API_KEY"
-                alt="USA Map"
+                src={usa}  // Use imported image
+                alt="USA Location"
                 className="rounded-lg shadow-md"
               />
             </a>
@@ -206,10 +258,14 @@ function Contact() {
           {/* UAE Location */}
           <div className="bg-orange-500 text-white p-6 rounded-lg shadow-lg">
             <h3 className="text-2xl font-bold flex items-center">
-            <span className="mr-2 bg-white text-orange-500 p-2 rounded-full">
-          <FontAwesomeIcon icon={faMapMarkerAlt} />
-        </span> UAE
+              <span className="mr-2 bg-white text-orange-500 p-2 rounded-full">
+                <FontAwesomeIcon icon={faMapMarkerAlt} />
+              </span>
+              UAE
             </h3>
+            <p>
+              .
+            </p>
             <p className="mt-4">
               <strong>Address:</strong> Arthicus Technologies Co. L.l.c. <br />
               Office 43–44, Al Fahidi, Bur Dubai, P.O.Box 49759 Dubai, UAE.
@@ -227,15 +283,14 @@ function Contact() {
               className="block mt-4"
             >
               <img
-                src="https://maps.googleapis.com/maps/api/staticmap?center=Dubai,+UAE&zoom=15&size=300x150&markers=color:red|label:A|Dubai,+UAE&key=YOUR_GOOGLE_MAPS_API_KEY"
-                alt="UAE Map"
+                src={uae}  // Use imported image
+                alt="UAE Location"
                 className="rounded-lg shadow-md"
               />
             </a>
           </div>
         </div>
       </div>
- 
     </div>
   );
 }

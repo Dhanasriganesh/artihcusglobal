@@ -23,7 +23,15 @@ import Tm from "../SAPModules/Tm";
 import Yl from "../SAPModules/Yl";
 import Admin from '../pages/Admin';
 import Upload from '../pages/Upload';
-
+import CkReddy from '../pages/CkReddy';
+import SurendraG from '../pages/SurendraG';
+import NaraReddy from '../pages/NaraReddy';
+import SyamaReddy from '../pages/SymaReddy';
+import HariReddy  from '../pages/HariReddy';
+import BhanuReddy from '../pages/BhanuReddy';
+import SudhakarA from '../pages/SudhakarA';
+import VenkatT from '../pages/VenkatT';
+import KalyanN from '../pages/KalyanN';
 // Protected Route Component
 const ProtectedRoute = ({ children }) => {
     const isAuthenticated = localStorage.getItem('adminLoggedIn') === 'true';
@@ -67,6 +75,18 @@ function Routers() {
             <Route path="/sap-modules/sap-mfs" element={<Mfs />} />
             <Route path="/sap-modules/sap-ewm" element={<Ewm />} />
             
+{/*Leaders*/}
+<Route path="/profile/nara-reddy" element={<NaraReddy />} />
+            <Route path="/profile/syama-reddy" element={<SyamaReddy />} />
+            <Route path="/profile/hari-reddy" element={<HariReddy />} />
+            <Route path="/profile/surendra-gondipalli" element={<SurendraG />} />
+            <Route path="/profile/bhanu-reddy" element={<BhanuReddy />} />
+            <Route path="/profile/sudhakar-amirapu" element={<SudhakarA />} />
+            <Route path="/profile/venkat-tangirala" element={<VenkatT />} />
+            <Route path="/profile/kalyan-nese" element={<KalyanN />} />
+            <Route path="/profile/ck-reddy" element={<CkReddy />} />
+
+
             {/* Admin Routes */}
             <Route path="/admin" element={<Admin />} />
             <Route path="/admin/upload" element={

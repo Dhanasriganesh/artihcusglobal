@@ -8,8 +8,9 @@ import Contacthome from '../HomeComponents/ContactHome/Contacthome';
 import Testimonial from '../HomeComponents/Testimonial/Testimonial';
 import Leadership from "../HomeComponents/Leadership/Leadership";
 import Vision from "../HomeComponents/Vision/Vision";
- 
-function Home() {
+ import IndustryCards from '../HomeComponents/IndustryCards/IndustryCards';
+import Clients from '../HomeComponents/Clients/Clients';
+ function Home() {
   return (
     <div className="min-h-screen w-full">
       {/* Hero Section */}
@@ -65,6 +66,11 @@ function Home() {
           <Services />
         </div>
       </section>
+      <section className="bg-gray-50 py-8 sm:py-12 px-4 sm:px-6 md:px-12 lg:px-24">
+        <div className="max-w-7xl mx-auto">
+          <IndustryCards />
+        </div>
+      </section>
  
       {/* Vision Section */}
       <section className="py-8 sm:py-12 px-4 sm:px-6 md:px-12 lg:px-24">
@@ -86,7 +92,11 @@ function Home() {
           <Testimonial />
         </div>
       </section>
- 
+      <section className="py-8 sm:py-12 px-4 sm:px-6 md:px-12 lg:px-24">
+        <div className="max-w-7xl mx-auto">
+          <Clients />
+        </div>
+      </section>
       {/* Contact Section */}
       <section className="bg-gray-50 py-8 sm:py-12 px-4 sm:px-6 md:px-12 lg:px-24">
         <div className="max-w-7xl mx-auto">
