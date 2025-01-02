@@ -67,11 +67,23 @@ function Cards() {
       </div>
  
       {/* Right section for the text */}
-      <div className="w-full md:w-1/2 flex flex-col justify-center items-center min-h-screen mt-8 md:mt-0">
-        <h2 className="text-3xl font-bold text-orange-400 mb-4 text-center">Modules We Offer</h2>
-        <p className="text-lg mb-6 text-center">
-          We deliver excellence by hiring and partnering with the best in the business.
-        </p>
+      {/* Right section for the text */}
+      <div className="relative w-full md:w-1/2 flex flex-col justify-start items-start min-h-screen mt-96 ml-56">
+        {/* Combined Line Design */}
+        <div className="absolute left-0 top-0 flex justify-center h-full">
+          {/* Black Line behind the Orange Line */}
+          <div className="absolute bg-black h-60 w-[1px] top-2 z-0"></div> {/* Adjusted top position */}
+          {/* Orange Line */}
+          <div className="absolute bg-orange-500 h-28 w-[3px] top-16 z-10"></div> {/* Both lines start at the same position */}
+        </div>
+ 
+        <h2 className="text-3xl font-bold text-orange-500 mb-4 ml-10">Modules We Offer</h2>
+        <div className="text-md leading-relaxed w-full ml-10">
+          <p className="mb-2">
+            We deliver excellence by hiring and partnering with
+          </p>
+          <p>the best in the business</p>
+        </div>
       </div>
     </div>
   );

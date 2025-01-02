@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Applicationservices() {
+function SapSs() {
   return (
     <div>
       
@@ -8,4 +8,4 @@ function Applicationservices() {
   )
 }
 
-export default Applicationservices
+export default SapSs

@@ -32,6 +32,24 @@ import BhanuReddy from '../pages/BhanuReddy';
 import SudhakarA from '../pages/SudhakarA';
 import VenkatT from '../pages/VenkatT';
 import KalyanN from '../pages/KalyanN';
+import Services from '../HomeComponents/Services/Services';
+import SapImplementation from "../SapServices/SapImplementation"
+import SapRollouts from '../SapServices/SapRollouts';
+import SapSupport from '../SapServices/SapSupport';
+import SapMC from '../SapServices/SapMC';
+import SapRise from '../SapServices/SapRise';
+import SapOn from '../SapServices/SapOn';
+import SapAms from '../SapServices/SapAms';
+import SapSs from '../SapServices/SapSs';
+import SapMigration from '../SapServices/SapMigration';
+import SapGrow from '../SapServices/SapGrow';
+import CustSoft from '../SapServices/CustSoft';
+import Aiser from '../SapServices/Aiser';
+import Aisol from '../SapServices/Aisol';
+import Infraser from '../SapServices/Infraser';
+import MobApp from '../SapServices/MobApp';
+import WebApp from '../SapServices/WebApp';
+import SapIntegration from '../SapServices/SapIntegration';
 // Protected Route Component
 const ProtectedRoute = ({ children }) => {
     const isAuthenticated = localStorage.getItem('adminLoggedIn') === 'true';
@@ -86,6 +104,25 @@ function Routers() {
             <Route path="/profile/kalyan-nese" element={<KalyanN />} />
             <Route path="/profile/ck-reddy" element={<CkReddy />} />
 
+{/*Services*/}
+<Route path="/services" element={<Services/>}/>
+<Route path="/services/sap-implementation" element={<SapImplementation/>}/>
+<Route path="/services/sap-rollouts" element={<SapRollouts/>}/>
+<Route path="/services/sap-support" element={<SapSupport/>}/>
+<Route path="/services/sap-migration" element={<SapMigration/>}/>
+<Route path="/services/sap-app-mng" element={<SapAms/>}/>
+<Route path="/services/sap-security-services" element={<SapSs/>}/>
+<Route path="/services/sap-integration" element={<SapIntegration/>}/>
+<Route path="/services/sap-migrate" element={<SapMC/>}/>
+<Route path="/services/sap-hana" element={<SapOn/>}/>
+<Route path="/services/sap-rise" element={<SapRise/>}/>
+<Route path="/services/sap-grow" element={<SapGrow/>}/>
+<Route path="/services/custom-soft" element={<CustSoft/>}/>
+<Route path="/services/infra-serv" element={<Infraser/>}/>
+<Route path="/services/mob-dev" element={<MobApp/>}/>
+<Route path="/services/web-dev" element={<WebApp/>}/>
+<Route path="/services/ai-solutions" element={<Aisol/>}/>
+<Route path="/services/ai-services" element={<Aiser/>}/>
 
             {/* Admin Routes */}
             <Route path="/admin" element={<Admin />} />

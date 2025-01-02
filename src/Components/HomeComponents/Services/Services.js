@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
- 
- 
-const SAPCard = ({ title, description, icon }) => {
+import { useNavigate } from "react-router-dom";
+
+const SAPCard = ({ title, description, icon, onClick }) => {
   return (
-    <div className="bg-gray-900 rounded-lg p-8 max-w-sm flex flex-col items-center text-center relative">
+    <div className="bg-gray-900 rounded-lg p-8 max-w-sm flex flex-col items-center text-center relative group">
       <div className="absolute inset-0 rounded-lg border border-orange-500/30"></div>
       <div className="w-16 h-16 mb-6 text-orange-500">
         {icon ? (
@@ -34,104 +34,210 @@ const SAPCard = ({ title, description, icon }) => {
       <h2 className="text-white text-2xl font-bold mb-4">{title}</h2>
       <p className="text-gray-300 mb-8">{description}</p>
       <button
-        className="px-6 py-2 rounded-md transition-colors duration-300
-          bg-transparent text-orange-500 border border-orange-500
-          hover:bg-white hover:text-gray-900 hover:border-white
-          active:bg-gray-100"
+        onClick={onClick}
+        className="px-6 py-2 rounded-md 
+          bg-transparent text-orange-500 border-2 border-orange-500
+          hover:bg-orange-500 hover:text-white
+          active:bg-orange-600 active:border-orange-600
+          transform transition-all duration-200 ease-in-out
+          hover:scale-105 active:scale-95
+          cursor-pointer
+          focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50
+          shadow-md hover:shadow-lg"
       >
         View More
       </button>
     </div>
   );
 };
- 
-const Services = () => {
+
+// Rest of the Services component remains the same...
+
+const Services = () =>  {
+  const navigate = useNavigate();
   const sapServices = [
-    { title: "SAP Implementation", description: "Deploy SAP to streamline processes, enhance efficiency, train users, and ensure success.", icon: null },
-    { title: "SAP Rollouts", description: "Standardize processes, ensure data consistency, and integrate operations across locations.", icon: null },
-    { title: "SAP Support", description: "Ensure smooth operations, resolve issues, and optimize system performance with SAP support.", icon: null },
-    { title: "SAP Upgrades", description: "Upgrade SAP systems to enhance capabilities and leverage the latest technological advancements.", icon: null },
-    { title: "SAP Data Migration", description: "Ensure seamless transfer of data while maintaining accuracy and system integrity.", icon: null },
-    { title: "SAP Customization", description: "Tailor SAP systems to align with unique business needs for maximum efficiency.", icon: null },
-    { title: "AI Prediction Models", description: "Create intelligent systems to predict trends and outcomes for improved decision-making.", icon: null },
-    { title: "AI Chatbots", description: "Integrate chatbots to enhance customer interaction with cutting-edge AI solutions.", icon: null },
-    { title: "Web Applications", description: "Build scalable, feature-rich applications tailored to your business needs.", icon: null },
-    { title: "Mobile Applications", description: "Develop robust mobile applications to expand your reach and drive engagement.", icon: null },
-    { title: "E-commerce Platforms", description: "Create seamless e-commerce solutions with user-friendly designs and advanced functionality.", icon: null },
-    { title: "Cloud Solutions", description: "Adopt cloud services for scalable, secure, and future-ready business operations.", icon: null },
+    { 
+      title: "SAP Implementation", 
+      description: "Deploy SAP to streamline processes, enhance efficiency, train users, and ensure success.", 
+      icon: null,
+      route: "sap-implementation"
+    },
+    { 
+      title: "SAP Rollouts", 
+      description: "Standardize processes, ensure data consistency, and integrate operations across locations.", 
+      icon: null,
+      route: "sap-rollouts"
+    },
+    { 
+      title: "SAP Support", 
+      description: "Ensure smooth operations, resolve issues, and optimize system performance with SAP support.", 
+      icon: null,
+      route: "sap-support"
+    },
+    { 
+      title: "SAP Migration", 
+      description: "SAP Migration moves systems and data to new environments, ensuring minimal business disruption.", 
+      icon: null,
+      route: "sap-migration"
+    },
+    { 
+      title: "SAP Application Management Services", 
+      description: "SAP AMS ensures reliable support, performance optimization, and seamless integration for evolving business needs.", 
+      icon: null,
+      route: "sap-app-mng"
+    },
+    { 
+      title: "SAP Security Services", 
+      description: "SAP Security protects systems with access control, encryption, and audits, ensuring secure operations.", 
+      icon: null,
+      route: "sap-security-services"
+    },
+    { 
+      title: "SAP Integration", 
+      description: "SAP Integration links systems for seamless data exchange, unified workflows, and real-time insights.", 
+      icon: null,
+      route: "sap-integration"
+    },
+    { 
+      title: "SAP Migration To Cloud", 
+      description: "SAP Cloud Migration moves systems to the cloud for scalability, cost savings, and agility.", 
+      icon: null,
+      route: "sap-migrate"
+    },
+    { 
+      title: "SAP S/4 HANA On Premis", 
+      description: "SAP S/4HANA On-Premise offers full control, customization, and flexibility for compliance-focused businesses.", 
+      icon: null,
+      route: "sap-hana"
+    },
+    { 
+      title: "SAP S/4 HANA RISE with SAP", 
+      description: "SAP S/4HANA RISE offers a cloud-based transformation with services for modernizing and optimizing operations.", 
+      icon: null,
+      route: "sap-rise"
+    },
+    { 
+      title: "SAP S/4 HANA Grow with SAP", 
+      description: "SAP S/4HANA Grow supports SMEs with scalable digital transformation and continuous growth.", 
+      icon: null,
+      route: "sap-grow"
+    },
+
+    { 
+      title: "Custom Software", 
+      description: "Custom software delivers personalized features, enhancing efficiency, scalability, and user experience for unique business needs.", 
+      icon: null,
+      route: "custom-soft"
+    },
+    { 
+      title: "Infrastructure Services", 
+      description: "Infrastructure Services ensure reliable, scalable, and secure IT operations through server management, cloud services, and security.", 
+      icon: null,
+      route: "infra-serv"
+    },
+    { 
+      title: "Mobile Development", 
+      description: "Mobile Development creates apps for smartphones and tablets, focusing on UX, performance, and seamless integration.", 
+      icon: null,
+      route: "mob-dev"
+    },
+    { 
+      title: "Web Development", 
+      description: "Web Development creates and maintains websites, combining front-end and back-end for functionality and responsiveness.", 
+      icon: null,
+      route: "web-dev"
+    },
+    { 
+      title: "AI Solutions", 
+      description: "AI Solutions automate tasks, enhance decision-making, and optimize operations through technologies like machine learning and data analytics.", 
+      icon: null,
+      route: "ai-solutions"
+    },
+    { 
+      title: "AI Services", 
+      description: "AI Services provide consulting and technologies like machine learning and automation to optimize processes and drive innovation.", 
+      icon: null,
+      route: "ai-services"
+    },
   ];
- 
-  const [displayedCards, setDisplayedCards] = useState(sapServices); // Default is all SAP services.
-  const [activeButton, setActiveButton] = useState('SAP'); // To manage which button is active
- 
-  // Handlers to update displayed cards based on the button clicked.
+
+  const [displayedCards, setDisplayedCards] = useState(sapServices.slice(0, 6)); // Start with SAP services
+  const [activeButton, setActiveButton] = useState('SAP');
+
+  const handleViewMore = (route) => {
+    // Remove '/services' from the route if it exists
+    const cleanRoute = route.replace('/services/', '');
+    navigate(`/services/${cleanRoute}`);
+  };
+
   const handleSAPServices = () => {
-    setDisplayedCards(sapServices);
+    setDisplayedCards(sapServices.slice(0, 11));
     setActiveButton('SAP');
   };
- 
+
   const handleApplicationServices = () => {
-    setDisplayedCards(sapServices.slice(8, 12)); // Displays 4 cards from index 8 to 11.
+    setDisplayedCards(sapServices.slice(11, 15));
     setActiveButton('Application');
   };
- 
+
   const handleArtificialIntelligence = () => {
-    setDisplayedCards(sapServices.slice(6, 8)); // Displays 2 cards from index 6 to 7.
+    setDisplayedCards(sapServices.slice(15, 17));
     setActiveButton('AI');
   };
- 
+
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Automotive Header */}
-     
- 
-      {/* SAP Cards Section */}
-      <div className="relative bg-cover bg-center py-16" >
-        <div className="absolute inset-0 bg-black"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Services We Offer Content */}
-          <div className="mb-16 text-center">
-            <h2 className="text-3xl font-semibold text-white mb-4">Services We Offer</h2>
-            <p className="text-white text-lg mb-6">
-              Modernize and automate your warehouse.
-            </p>
-            <div className="flex justify-center gap-4">
-              <button
-                onClick={handleSAPServices}
-                className={`px-6 py-2 rounded-md text-white transition-colors duration-300 ${activeButton === 'SAP' ? 'bg-orange-500 hover:bg-orange-600' : 'bg-gray-300 text-gray-900 hover:bg-orange-500 hover:text-white'}`}
-              >
-                SAP Services
-              </button>
-              <button
-                onClick={handleApplicationServices}
-                className={`px-6 py-2 rounded-md transition-colors duration-300 ${activeButton === 'Application' ? 'bg-orange-500 hover:bg-orange-600' : 'bg-gray-300 text-gray-900 hover:bg-orange-500 hover:text-white'}`}
-              >
-                Application Services
-              </button>
-              <button
-                onClick={handleArtificialIntelligence}
-                className={`px-6 py-2 rounded-md transition-colors duration-300 ${activeButton === 'AI' ? 'bg-orange-500 hover:bg-orange-600' : 'bg-gray-300 text-gray-900 hover:bg-orange-500 hover:text-white'}`}
-              >
-                Artificial Intelligence
-              </button>
-            </div>
+    {/* Automotive Header */}
+   
+
+    {/* SAP Cards Section */}
+    <div className="relative bg-cover bg-center py-16" >
+      <div className="absolute inset-0 bg-black"></div>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Services We Offer Content */}
+        <div className="mb-16 text-center">
+          <h2 className="text-3xl font-semibold text-white mb-4">Services We Offer</h2>
+          <p className="text-white text-lg mb-6">
+            Modernize and automate your warehouse.
+          </p>
+          <div className="flex justify-center gap-4">
+            <button
+              onClick={handleSAPServices}
+              className={`px-6 py-2 rounded-md text-white transition-colors duration-300 ${activeButton === 'SAP' ? 'bg-orange-500 hover:bg-orange-600' : 'bg-gray-300 text-gray-900 hover:bg-orange-500 hover:text-white'}`}
+            >
+              SAP Services
+            </button>
+            <button
+              onClick={handleApplicationServices}
+              className={`px-6 py-2 rounded-md transition-colors duration-300 ${activeButton === 'Application' ? 'bg-orange-500 hover:bg-orange-600' : 'bg-gray-300 text-gray-900 hover:bg-orange-500 hover:text-white'}`}
+            >
+              Application Services
+            </button>
+            <button
+              onClick={handleArtificialIntelligence}
+              className={`px-6 py-2 rounded-md transition-colors duration-300 ${activeButton === 'AI' ? 'bg-orange-500 hover:bg-orange-600' : 'bg-gray-300 text-gray-900 hover:bg-orange-500 hover:text-white'}`}
+            >
+              Artificial Intelligence
+            </button>
           </div>
- 
-          {/* SAP Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        </div>
+
+        {/* SAP Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {displayedCards.map((service, index) => (
               <SAPCard
                 key={index}
                 title={service.title}
                 description={service.description}
                 icon={service.icon}
+                onClick={() => handleViewMore(service.route)}
               />
-            ))}
-          </div>
+          ))}
         </div>
       </div>
     </div>
+  </div>
   );
 };
- 
+
 export default Services;

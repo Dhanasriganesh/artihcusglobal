@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Contact from "../images/contact.jpg";
+import Contact from "../images/Contact.jpg";
 import sap from "../images/sap.png";
 import shadow from "../images/shadow.png";
- 
+import { useParams } from 'react-router-dom';
 const CornerDecoration = () => (
   <div className="absolute right-4 top-4 w-6 h-6">
     <div className="absolute right-0 top-0 w-3 h-3 border-t-2 border-r-2 border-white opacity-50" />
@@ -12,7 +12,7 @@ const CornerDecoration = () => (
  
 const SapImplementation = () => {
   const [expandedSection, setExpandedSection] = useState(null);
- 
+  const { id } = useParams();
   const challenges = [
     {
       title: "Complexity",

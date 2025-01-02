@@ -186,7 +186,7 @@ const Header = () => {
               ))}
               <Link
                 to="/contact"
-                className="block px-4 py-3 text-orange-500 hover:text-orange-600"
+                className="block px-4 py-3 font-bold text-orange-500 hover:text-orange-600"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contact

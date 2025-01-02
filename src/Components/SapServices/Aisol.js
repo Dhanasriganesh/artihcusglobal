@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ArtificialInt() {
+function Aisol() {
   return (
     <div>
       
@@ -8,4 +8,4 @@ function ArtificialInt() {
   )
 }
 
-export default ArtificialInt
+export default Aisol

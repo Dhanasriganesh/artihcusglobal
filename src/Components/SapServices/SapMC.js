@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Sapservices() {
+function SapMC() {
   return (
     <div>
       
@@ -8,4 +8,4 @@ function Sapservices() {
   )
 }
 
-export default Sapservices
+export default SapMC
