@@ -46,13 +46,13 @@ function Cards() {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row justify-between items-start px-6 md:px-12 lg:px-14 gap-x-12">
+    <div className="flex flex-col md:flex-row mb-0 justify-between items-start px-6 md:px-12 lg:px-14 gap-x-12">
       {/* Left section for the cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full md:w-2/3 lg:w-1/3">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full md:w-2/3 lg:w-2/4">
         {cardData.map((card, index) => (
           <div
             key={index}
-            className="bg-black text-white rounded-lg p-2 hover:shadow-lg hover:scale-105 transition-transform duration-300 w-58"
+            className="bg-black text-white rounded-lg p-2 hover:shadow-lg hover:scale-105 transition-transform duration-300 "
           >
             <div className="flex items-center justify-start space-x-4 mb-4">
               {/* Use img tag to display the icon */}
@@ -71,20 +71,17 @@ function Cards() {
       </div>
 
       {/* Right section for the text */}
-      <div className="relative w-full md:w-1/2 flex flex-col justify-start items-start min-h-screen mt-96 ml-56">
+      <div className="relative w-full md:w-1/3 lg:w-2/5 flex flex-col justify-start items-start mt-12 md:mt-0">
         {/* Combined Line Design */}
         <div className="absolute left-0 top-0 flex justify-center h-full">
-          {/* Black Line behind the Orange Line */}
-          <div className="absolute bg-black h-60 w-[1px] top-2 z-0"></div> {/* Adjusted top position */}
-          {/* Orange Line */}
-          <div className="absolute bg-orange-500 h-28 w-[3px] top-16 z-10"></div> {/* Both lines start at the same position */}
+          <div className="absolute bg-black h-40 md:h-60 w-[1px] top-4 z-0"></div>
+          <div className="absolute bg-orange-500 h-16 md:h-28 w-[3px] top-8 z-10"></div>
         </div>
-
-        <h2 className="text-3xl font-bold text-orange-500 mb-4 ml-10">Modules We Offer</h2>
-        <div className="text-md leading-relaxed w-full ml-10">
-          <p className="mb-2">
-            We deliver excellence by hiring and partnering with
-          </p>
+        <h2 className="text-2xl lg:mt-20 md:text-3xl font-bold text-orange-500 mb-4 ml-4">
+          Modules We Offer
+        </h2>
+        <div className="text-sm md:text-md leading-relaxed ml-4">
+          <p>We deliver excellence by hiring and partnering with</p>
           <p>the best in the business</p>
         </div>
       </div>

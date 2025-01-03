@@ -45,7 +45,7 @@ const Clients = () => {
     <div className="bg-black py-4">
       <div className="container mx-auto px-4">
         {/* Title Section */}
-        <div className="grid md:grid-cols-2 items-center text-center mb-8 relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center text-center mb-8 relative">
           <div>
             <h1 className="text-4xl md:text-4xl font-semibold text-white flex justify-center items-center h-full">
               Clients
@@ -58,7 +58,8 @@ const Clients = () => {
               <div className="bg-orange-500 h-[4px] w-16 z-10"></div>
             </div>
           </div>
-          <div>
+          {/* Only visible on md screens and above */}
+          <div className="hidden md:block">
             <h1 className="text-4xl md:text-4xl font-semibold text-white flex justify-center items-center h-full">
               Partners
             </h1>
@@ -70,14 +71,31 @@ const Clients = () => {
               <div className="bg-orange-500 h-[4px] w-16 z-10"></div>
             </div>
           </div>
-          {/* Extended Divider Line */}
+          {/* Vertical Divider Line */}
           <div className="absolute inset-y-0 left-1/2 w-[1px] bg-white opacity-50 transform -translate-x-1/2"></div>
         </div>
  
         {/* Logos Section */}
-        <div className="grid md:grid-cols-2 gap-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
           <LogoGrid logos={leftLogos} />
-          <LogoGrid logos={rightLogos} />
+          {/* Right Logos for larger screens */}
+          <div className="md:hidden mt-12">
+            {/* Partners Section for Mobile */}
+            <h1 className="text-4xl font-semibold text-white text-center">Partners</h1>
+            <div className="relative w-full flex justify-center mt-2">
+              {/* White Line */}
+              <div className="absolute bg-white h-[1px] w-[50%] opacity-50"></div>
+              {/* Orange Line */}
+              <div className="bg-orange-500 h-[4px] w-16 z-10"></div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+              <LogoGrid logos={rightLogos} />
+            </div>
+          </div>
+          {/* Left Logos */}
+          <div className="md:block hidden">
+            <LogoGrid logos={rightLogos} />
+          </div>
         </div>
       </div>
     </div>

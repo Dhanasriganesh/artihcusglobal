@@ -50,6 +50,7 @@ import Infraser from '../SapServices/Infraser';
 import MobApp from '../SapServices/MobApp';
 import WebApp from '../SapServices/WebApp';
 import SapIntegration from '../SapServices/SapIntegration';
+import Contacthome from '../HomeComponents/ContactHome/Contacthome';
 // Protected Route Component
 const ProtectedRoute = ({ children }) => {
     const isAuthenticated = localStorage.getItem('adminLoggedIn') === 'true';
@@ -68,7 +69,7 @@ function Routers() {
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
-          
+          <Route path='/contacthome' element={<Contacthome/>}/>
             
             {/* About Section Routes */}
             <Route path="/about/careers" element={<Career />} />

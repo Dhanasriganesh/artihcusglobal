@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { X, Upload, Check, AlertCircle } from "lucide-react";
- 
+
 // Custom Alert Component
 const Alert = ({ children, variant = "default", className = "" }) => {
   const baseStyles = "px-4 py-3 rounded-lg flex items-center gap-3";
@@ -9,14 +9,14 @@ const Alert = ({ children, variant = "default", className = "" }) => {
     error: "bg-red-50 border border-red-200",
     default: "bg-gray-50 border border-gray-200"
   };
- 
+
   return (
     <div className={`${baseStyles} ${variantStyles[variant]} ${className}`}>
       {children}
     </div>
   );
 };
- 
+
 const Career = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -28,16 +28,16 @@ const Career = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [fileName, setFileName] = useState("");
- 
+
   const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData({ ...formData, [id]: value });
   };
- 
+
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
-      if (file.size > 5 * 1024 * 1024) { // 5MB limit
+      if (file.size > 5 * 1024 * 1024) {
         setErrorMessage("File size should be less than 5MB");
         return;
       }
@@ -46,34 +46,36 @@ const Career = () => {
       setErrorMessage("");
     }
   };
- 
+
   const removeFile = () => {
     setFormData({ ...formData, resume: null });
     setFileName("");
   };
- 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
     setErrorMessage("");
- 
+
     const formDataToSend = new FormData();
     Object.keys(formData).forEach(key => {
       formDataToSend.append(key, formData[key]);
     });
- 
+
     try {
-      const response = await fetch("http://localhost:5000/send-email", {
+      const response = await fetch("http://localhost:5000/send-email/career", {
         method: "POST",
         body: formDataToSend,
       });
- 
+
+      const data = await response.json();
+
       if (response.ok) {
         setSuccessMessage("Application submitted successfully! We'll contact you soon.");
         setFormData({ name: "", email: "", phone: "", resume: null });
         setFileName("");
       } else {
-        setErrorMessage("Error submitting the application. Please try again.");
+        setErrorMessage(data.error || "Error submitting the application. Please try again.");
       }
     } catch (error) {
       console.error("Error:", error);
