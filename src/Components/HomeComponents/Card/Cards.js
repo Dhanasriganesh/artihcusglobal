@@ -54,18 +54,20 @@ function Cards() {
             key={index}
             className="bg-black text-white rounded-lg p-2 hover:shadow-lg hover:scale-105 transition-transform duration-300 "
           >
-            <div className="flex items-center justify-start space-x-4 mb-4">
+            <div className="flex items-center justify-center space-x-4 mb-4">
               {/* Use img tag to display the icon */}
               <img src={card.icon} alt={`${card.title} icon`} className="w-10 h-10" />
             </div>
             <h3 className="text-xl font-bold mb-2">{card.title}</h3>
             <hr className="border-t border-gray-600 mb-4" />
             <p className="text-sm mb-6">{card.description}</p>
-            <Link to={card.link}>
-              <button className="bg-orange-500 text-black px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors duration-300">
-                {card.button}
-              </button>
-            </Link>
+            <div className="flex justify-center">
+              <Link to={card.link}>
+                <button className=" bg-orange-500 text-black px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors duration-300">
+                  {card.button}
+                </button>
+              </Link>
+            </div>
           </div>
         ))}
       </div>

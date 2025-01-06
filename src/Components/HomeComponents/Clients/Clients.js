@@ -24,9 +24,10 @@ import element from '../../images/element.png';
 import kito from '../../images/kitoo.png';
 import iffco from '../../images/iffco.png';
  import daikin from "../../images/daikin.png"
+ import fusion from "../../images/fusion.png"
 const Clients = () => {
   const leftLogos = [KPMG, Colgate, Innovapptive, Infokrafts, Merck, Mindtree, somany, Vishal, madjid, element, kito, iffco, Danfoss,daikin];
-  const rightLogos = [KPMG, TechMahindra, NTTData, Techwave, yash, accenture, capgemini, soltius, VKollab, Kagool, Phoenix, LohiaCorp];
+  const rightLogos = [KPMG, TechMahindra, NTTData, Techwave, yash, accenture, capgemini, soltius, VKollab, Kagool, Phoenix, LohiaCorp,fusion];
  
   const LogoGrid = ({ logos }) => (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

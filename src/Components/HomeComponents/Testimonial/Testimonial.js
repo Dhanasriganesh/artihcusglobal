@@ -37,7 +37,7 @@ const Testimonial = () => {
             <p className="group-hover:text-black duration-500 z-10">{course.description}</p>
  
             {/* CEO Text in Orange */}
-            <p className="text-orange-500 mt-4 font-semibold">{course.ceo}</p>
+            <p className="text-orange-500 group-hover:text-black mt-4 font-semibold">{course.ceo}</p>
           </div>
         ))}
       </div>

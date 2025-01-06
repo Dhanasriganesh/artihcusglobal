@@ -9,7 +9,7 @@ const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [activeSubmenu, setActiveSubmenu] = useState(null);
   const navigate = useNavigate();
-
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false); // State for globe dropdown
   useEffect(() => {
     const handleScroll = () => {
       setIsSticky(window.scrollY > 0);
@@ -285,13 +285,54 @@ const Header = () => {
  
           {/* Social Icons - Desktop */}
           <div className="hidden md:flex items-center gap-8">
+            {/* Globe Icon Dropdown */}
+          <div className="relative">
+            <button
+              className="p-2 text-orange-500 hover:text-orange-600 transition-colors duration-200"
+              onClick={() => setIsDropdownOpen((prev) => !prev)}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 2a10 10 0 1010 10A10 10 0 0012 2zm0 18a8 8 0 110-16 8 8 0 010 16zm0-14a6 6 0 110 12 6 6 0 010-12z"
+                />
+              </svg>
+            </button>
+ 
+            {isDropdownOpen && (
+              <div className="absolute right-0 mt-2 w-40 bg-white border border-gray-200 rounded-lg shadow-md z-50">
+                <ul>
+                  {["India", "UAE", "USA"].map((country) => (
+                    <li
+                      key={country}
+                      className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                      onClick={() => {
+                        console.log(`Selected: ${country}`);
+                        setIsDropdownOpen(false); // Close dropdown after selection
+                      }}
+                    >
+                      {country}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-orange-600">
               <FaTwitter size={24} />
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-orange-600">
               <FaLinkedin size={24} />
             </a>
-            <a href="/blog" className="text-orange-500 hover:text-orange-600">
+            <a href="/about/blogs" className="text-orange-500 hover:text-orange-600">
               <FaBlog size={24} />
             </a>
           </div>

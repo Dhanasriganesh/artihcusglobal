@@ -2,7 +2,7 @@ import {React, useState, useEffect} from 'react';
 import Cards from '../HomeComponents/Card/Cards';
 import Footer from '../Footer/Footer';
 import { ReactTyped as Typed } from 'react-typed';
-import Banner from '../images/bannerr.jpg';
+import Banner from '../images/bgimg.jpg';
 import Services from '../HomeComponents/Services/Services'; // Import the Services component
 import Contacthome from '../HomeComponents/ContactHome/Contacthome';
 import Testimonial  from '../HomeComponents/Testimonial/Testimonial';

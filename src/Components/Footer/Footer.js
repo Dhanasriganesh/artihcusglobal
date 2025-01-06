@@ -58,11 +58,11 @@ const Footer = () => {
         </div>
  
         {/* About and SAP Modules Links */}
-        <div className='flex gap-14'>
+        
           {/* About Links */}
           <div>
-            <h3 className="text-xl font-semibold mb-6">About Links</h3>
-            <ul className="space-y-3">
+          <h3 className="text-xl font-semibold mb-6">About Links</h3>
+          <ul className="space-y-3">
               {Object.entries(aboutRoutes).map(([item, route]) => (
                 <li key={item}>
                   <Link
@@ -75,7 +75,7 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
+        </div>
  
           {/* SAP Modules */}
           <div>
@@ -94,24 +94,23 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-        </div>
- 
-        {/* Industries */}
-        <div>
+       
+           {/* Industries */}
+           <div>
           <h3 className="text-xl font-semibold mb-6">Industries</h3>
           <ul className="space-y-3">
-            {Object.entries(industryRoutes).map(([item, route]) => (
-              <li key={item}>
-                <Link
-                  to={route}
-                  className="text-gray-300 hover:text-white flex items-center"
-                >
-                  <span className="text-orange-500 mr-2">›</span>
-                  {item}
-                </Link>
-              </li>
-            ))}
-          </ul>
+  {Object.entries(industryRoutes).map(([item, route]) => (
+    <li key={item}>
+      <Link
+        to={route}
+        className="text-gray-300 hover:text-white flex items-center"
+      >
+        <span className="text-orange-500 mr-2">›</span>
+        {item}
+      </Link>
+    </li>
+  ))}
+</ul>
         </div>
  
         {/* Contact Details */}
@@ -146,7 +145,10 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div>
+       </div>
+ 
+    
+      
  
       {/* Footer Bottom */}
       <div className="max-w-7xl mx-auto px-4 mt-3 border-t border-gray-800">
