@@ -6,7 +6,7 @@ const Testimonial = () => {
       name: 'Testimonial',
       description:
         'Outstanding service, from initial consultation to final installation, exceeded expectations. Highly recommend for SAP EWM implementations!',
-      ceo: 'CEO of a Retaiil giant ,UAE', // Added CEO field
+      ceo: 'CEO of a Retail giant ,UAE', // Added CEO field
     },
     {
       name: 'Testimonial',

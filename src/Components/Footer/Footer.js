@@ -3,15 +3,15 @@ import logo from '../images/Logooo.png';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhoneAlt, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+ 
 const Footer = () => {
-
   const aboutRoutes = {
     'Careers': '/about/careers',
     'Events': '/about/events',
     'News': '/about/news',
     'Blog': '/about/blogs'
   };
-
+ 
   const sapModuleRoutes = {
     'SAP EWM': '/sap-modules/sap-ewm',
     'SAP MFS': '/sap-modules/sap-mfs',
@@ -19,7 +19,7 @@ const Footer = () => {
     'SAP TM': '/sap-modules/sap-tm',
     'SAP BTP': '/sap-modules/sap-btp'
   };
-
+ 
   const industryRoutes = {
     'Fashion & Retail': '/industries/fashion-&-retail',
     'FMCG': '/industries/fmcg',
@@ -30,10 +30,10 @@ const Footer = () => {
     'Automotive': '/industries/automotive',
     'Food & Beverage': '/industries/food-&-beverage'
   };
-
+ 
   return (
-    <footer className="bg-black text-white py-4">
-      <div className="lg:flex lg:justify-between max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+    <footer className="bg-black text-white py-4 ">
+      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
         {/* Company Info */}
         <div className="lg:col-span-1">
           <div className="bg-white p-4 rounded-lg w-48 mb-6">
@@ -48,88 +48,85 @@ const Footer = () => {
             Our end-to-end suite of services enable our customers to operate profitably.
           </p>
           <div className="flex space-x-4">
-            <a href="https://x.com/i/flow/login?redirect_after_login=%2FArtihcusglobal" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700">
+            <a href="https://x.com/i/flow/login?redirect_after_login=%2FArtihcusglobal" className="w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center hover:bg-gray-700">
               𝕏
             </a>
-            <a href="https://www.linkedin.com/company/artihcus-global/" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700">
+            <a href="https://www.linkedin.com/company/artihcus-global/" className="w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center hover:bg-gray-700">
               in
             </a>
           </div>
         </div>
  
-        {/* About Links */}
+        {/* About and SAP Modules Links */}
         <div className='flex gap-14'>
-      {/* About Links */}
-      <div>
-        <h3 className="text-xl font-semibold mb-6">About Links</h3>
-        <ul className="space-y-3">
-          {Object.entries(aboutRoutes).map(([item, route]) => (
-            <li key={item}>
-              <Link 
-                to={route} 
-                className="text-gray-300 hover:text-white flex items-center"
-              >
-                <span className="text-orange-500 mr-2">›</span>
-                {item}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      {/* SAP Modules */}
-      <div>
-        <h3 className="text-xl font-semibold mb-6">SAP Modules</h3>
-        <ul className="space-y-3">
-          {Object.entries(sapModuleRoutes).map(([item, route]) => (
-            <li key={item}>
-              <Link 
-                to={route} 
-                className="text-gray-300 hover:text-white flex items-center"
-              >
-                <span className="text-orange-500 mr-2">›</span>
-                {item}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      {/* Industries */}
-     
-    </div>
-    <div>
-        <h3 className="text-xl font-semibold mb-6">Industries</h3>
-        <ul className="space-y-3">
-          {Object.entries(industryRoutes).map(([item, route]) => (
-            <li key={item}>
-              <Link 
-                to={route} 
-                className="text-gray-300 hover:text-white flex items-center"
-              >
-                <span className="text-orange-500 mr-2">›</span>
-                {item}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-    
-     
+          {/* About Links */}
+          <div>
+            <h3 className="text-xl font-semibold mb-6">About Links</h3>
+            <ul className="space-y-3">
+              {Object.entries(aboutRoutes).map(([item, route]) => (
+                <li key={item}>
+                  <Link
+                    to={route}
+                    className="text-gray-300 hover:text-white flex items-center"
+                  >
+                    <span className="text-orange-500 mr-2">›</span>
+                    {item}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+ 
+          {/* SAP Modules */}
+          <div>
+            <h3 className="text-xl font-semibold mb-6">SAP Modules</h3>
+            <ul className="space-y-3">
+              {Object.entries(sapModuleRoutes).map(([item, route]) => (
+                <li key={item}>
+                  <Link
+                    to={route}
+                    className="text-gray-300 hover:text-white flex items-center"
+                  >
+                    <span className="text-orange-500 mr-2">›</span>
+                    {item}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+ 
+        {/* Industries */}
+        <div>
+          <h3 className="text-xl font-semibold mb-6">Industries</h3>
+          <ul className="space-y-3">
+            {Object.entries(industryRoutes).map(([item, route]) => (
+              <li key={item}>
+                <Link
+                  to={route}
+                  className="text-gray-300 hover:text-white flex items-center"
+                >
+                  <span className="text-orange-500 mr-2">›</span>
+                  {item}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+ 
         {/* Contact Details */}
-        <div className='lg:ml-20'>
+        <div className=''>
           <h3 className="text-xl font-semibold mb-6">Contact Details</h3>
-          <div className="">
-            <div className="flex ">
+          <div className="space-y-4">
+            <div className="flex space-x-3">
               <span className="text-orange-500">
                 <FontAwesomeIcon icon={faMapMarkerAlt} />
               </span>
-              <p className="text-gray-300 text-sm">
+              <p className="text-gray-300 text-xs">
                 <a href="https://www.google.com/maps?q=Arthicus+Global+Private+Limited,+Hyderabad,+India">
-                  Artihcus Global Private Limited<br />
-                  Plot No. 227 – Kartikeya Towers, 1st floor<br />
-                  Matrusri Nagar, Miyapur, Hyderabad,<br />
-                  Telangana 500049, India.
+                  Artihcus Global Private Limited,
+                  Plot No. 227 – Kartikeya Towers, 1st floor,
+                  Matrusri Nagar, Miyapur,Hyderabad, Telangana 500049, India
                 </a>
               </p>
             </div>

@@ -114,7 +114,7 @@ function Contact() {
               .
             </p>
             <p className="mt-4">
-              <strong>Address:</strong> Arthicus Technologies Co. L.l.c. <br />
+              <strong>Address:</strong> Arthicus Technologies Co. L.L.C. <br />
               Office 43–44, Al Fahidi, Bur Dubai, P.O.Box 49759 Dubai, UAE.
             </p>
             <p className="mt-2">

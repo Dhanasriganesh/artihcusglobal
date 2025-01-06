@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
  
+// SAPCard component remains the same
 const SAPCard = ({ title, description, icon, onClick }) => {
   return (
-    <div className="bg-gray-900 rounded-lg p-8 max-w-sm flex flex-col items-center text-center relative group">
+    <div className="bg-gray-900 rounded-lg p-6 max-w-xs flex flex-col items-center text-center relative group">
       <div className="absolute inset-0 rounded-lg border border-orange-500/30"></div>
-      <div className="w-16 h-16 mb-6 text-orange-500">
+      <div className="w-12 h-12 mb-4 text-orange-500">
         {icon ? (
           <img src={icon} alt={`${title} Icon`} className="w-full h-full" />
         ) : (
@@ -31,11 +32,11 @@ const SAPCard = ({ title, description, icon, onClick }) => {
           </svg>
         )}
       </div>
-      <h2 className="text-white text-2xl font-bold mb-4">{title}</h2>
-      <p className="text-gray-300 mb-8">{description}</p>
+      <h2 className="text-white text-xl font-bold mb-3">{title}</h2>
+      <p className="text-gray-300 mb-6 text-sm">{description}</p>
       <button
         onClick={onClick}
-        className="px-6 py-2 rounded-md
+        className="px-4 py-1.5 rounded-md
           bg-transparent text-orange-500 border-2 border-orange-500
           hover:bg-orange-500 hover:text-white
           active:bg-orange-600 active:border-orange-600
@@ -43,7 +44,8 @@ const SAPCard = ({ title, description, icon, onClick }) => {
           hover:scale-105 active:scale-95
           cursor-pointer
           focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50
-          shadow-md hover:shadow-lg"
+          shadow-md hover:shadow-lg
+          text-sm"
       >
         View More
       </button>
@@ -158,7 +160,8 @@ const Services = () => {
     },
   ];
  
-  const [displayedCards, setDisplayedCards] = useState(sapServices.slice(0, 6)); // Start with SAP services
+  // Changed initial state to show first 11 SAP cards
+  const [displayedCards, setDisplayedCards] = useState(sapServices.slice(0, 11));
   const [activeButton, setActiveButton] = useState('SAP');
  
   const handleViewMore = (route) => {
@@ -167,7 +170,7 @@ const Services = () => {
   };
  
   const handleSAPServices = () => {
-    setDisplayedCards(sapServices.slice(0, 11));
+    setDisplayedCards(sapServices.slice(0, 11)); // Show all 11 SAP services
     setActiveButton('SAP');
   };
  
@@ -213,8 +216,8 @@ const Services = () => {
             </div>
           </div>
  
-          {/* SAP Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Grid showing 4 cards per row */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {displayedCards.map((service, index) => (
               <SAPCard
                 key={index}

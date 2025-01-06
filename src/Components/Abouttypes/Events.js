@@ -9,7 +9,7 @@ const Events = () => {
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
   const [selectedEventId, setSelectedEventId] = useState(null);
   const [likes, setLikes] = useState({});
-  const [autoSlide, setAutoSlide] = useState(true); // State to control auto sliding
+  const [autoSlide, setAutoSlide] = useState(false); // Auto slide is initially false
  
   useEffect(() => {
     const loadEvents = () => {
@@ -42,6 +42,12 @@ const Events = () => {
   const openLightbox = (eventId, index) => {
     setSelectedEventId(eventId);
     setSelectedImageIndex(index);
+    setAutoSlide(true); // Enable auto-slide when image is opened
+  };
+ 
+  const closeLightbox = () => {
+    setSelectedImageIndex(null);
+    setAutoSlide(false); // Stop auto-slide when lightbox is closed
   };
  
   const navigateImage = (direction) => {
@@ -273,7 +279,7 @@ const Events = () => {
         <ImageSlider
           images={events.find(e => e.id === selectedEventId).images}
           currentIndex={selectedImageIndex}
-          onClose={() => setSelectedImageIndex(null)}
+          onClose={closeLightbox}
         />
       )}
     </div>

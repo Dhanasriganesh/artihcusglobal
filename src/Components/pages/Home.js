@@ -43,7 +43,7 @@ function Home() {
       style={{ backgroundImage: `url(${Banner})`, height: 'calc(75vh - 64px)' }}
     >
       {/* Background Overlay */}
-      <div className="absolute inset-0 bg-black/30" />
+      <div className="absolute inset-0 " />
  
       {/* Content Container */}
       <div className="relative h-full flex flex-col justify-center px-4 sm:px-6 md:px-12 lg:px-36">
@@ -58,7 +58,7 @@ function Home() {
  
           <div className="text-xl sm:text-2xl font-bold text-white flex items-center">
             That improve{' '}
-            <span className="ml-2 text-orange-500 text-3xl sm:text-4xl md:text-5xl">
+            <span className="ml-2 text-black text-3xl sm:text-4xl md:text-5xl">
               <Typed
                 strings={[
                   'Sustainability',

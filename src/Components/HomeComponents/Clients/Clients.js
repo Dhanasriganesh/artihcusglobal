@@ -23,9 +23,9 @@ import madjid from '../../images/majid-al-futtaim.png';
 import element from '../../images/element.png';
 import kito from '../../images/kitoo.png';
 import iffco from '../../images/iffco.png';
- 
+ import daikin from "../../images/daikin.png"
 const Clients = () => {
-  const leftLogos = [KPMG, Colgate, Innovapptive, Infokrafts, Merck, Mindtree, somany, Vishal, madjid, element, kito, iffco, Danfoss];
+  const leftLogos = [KPMG, Colgate, Innovapptive, Infokrafts, Merck, Mindtree, somany, Vishal, madjid, element, kito, iffco, Danfoss,daikin];
   const rightLogos = [KPMG, TechMahindra, NTTData, Techwave, yash, accenture, capgemini, soltius, VKollab, Kagool, Phoenix, LohiaCorp];
  
   const LogoGrid = ({ logos }) => (
