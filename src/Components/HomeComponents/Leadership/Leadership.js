@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import ckreddy from "../../images/ck-reddy.jpg";
-import syamareddy from "../../images/syam-sundar-Reddy-.jpg";
 import narareddy from "../../images/Muralidhar Reddy_.jpg";
 import harireddy from "../../images/Harinath Reddy-.jpg";
 import surendra from "../../images/surendra Gondipalli-.jpg";
