@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import retail_banner from "../images/ecom.jpg";
-import ecom from '../images/e-commerce.jpg';
 import why_retail from "../images/commerce.jpg";
 import retail from "../images/retail.jpg";
  

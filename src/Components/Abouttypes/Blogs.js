@@ -3,19 +3,13 @@ import React, { useEffect, useState } from "react";
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
   const [selectedBlog, setSelectedBlog] = useState(null);
- 
+
   // Load blogs data from localStorage
   useEffect(() => {
     const savedBlogs = JSON.parse(localStorage.getItem("blogs")) || [];
     setBlogs(savedBlogs);
   }, []);
- 
-  const getPreviewContent = (content) => {
-    // Strip HTML tags and split by words
-    const textContent = content.replace(/<\/?[^>]+(>|$)/g, ""); // Remove HTML tags
-    return textContent.split(" ").slice(0, 3).join(" "); // Return the first three words
-  };
- 
+
   const formatDate = (dateString) => {
     if (!dateString) return "No date provided"; // Handle missing or invalid date
     const options = { year: "numeric", month: "long", day: "numeric" };

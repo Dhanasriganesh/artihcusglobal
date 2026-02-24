@@ -7,16 +7,8 @@ function Admin() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
-  const [currentMessage, setCurrentMessage] = useState(0);
   const navigate = useNavigate();
- 
-  const messages = [
-    "\"Welcome! Let's get started\"",
-    "\"Hi! Let's make great things happen.\"",
-    "\"Hello! Excited to have you!\"",
-    "\"Hi there! Let's get you set up and started.\""
-  ];
- 
+
   const handleSubmit = (e) => {
     e.preventDefault();
    
@@ -41,9 +33,7 @@ function Admin() {
             </div>
  
             <div className="text-center mb-3 flex flex-col items-center">
-              <h1 className="text-l text-orange-500 animate-pop opacity-100 transition-opacity duration-500 ease-in-out h-10">
-                {messages[currentMessage]}
-              </h1>
+              <h1 className="text-l text-orange-500">Admin Login</h1>
             </div>
  
             <form onSubmit={handleSubmit} className="w-full">

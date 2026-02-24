@@ -16,7 +16,6 @@ import sapyoo from '../images/sap-yoo.svg';
 import warehouse from '../images/warehouse.svg';
 import flowchart from "../images/flowchart.jpg"
 import smarter from "../images/smarter.jpg"
-import agility from "../images/Agility.jpg"
 function Fashion() {
   const [activeTab, setActiveTab] = useState("inbound");
  
@@ -280,7 +279,7 @@ function Fashion() {
           Top challenges faced by third-party logistics service providers worldwide in 2022
         </h2>
         <div>
-          <img src={flowchart} width={400} height={200} className="rounded-md shadow-2xl s m-4" />
+          <img src={flowchart} alt="Top 3PL logistics challenges 2022" width={400} height={200} className="rounded-md shadow-2xl s m-4" />
         </div>
       </div>
       <div className="px-6 py-6 lg:px-36 lg:py-12">

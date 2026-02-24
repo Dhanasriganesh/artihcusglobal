@@ -1,19 +1,10 @@
 import React, { useState } from "react";
 import Contact from "../images/Contact.jpg";
 import custom from "../images/custom.jpg";
-import { Minus, Plus } from "lucide-react";
- 
-const CornerDecoration = () => (
-  <div className="absolute right-4 top-4 w-6 h-6">
-    <div className="absolute right-0 top-0 w-3 h-3 border-t-2 border-r-2 border-white opacity-50" />
-    <div className="absolute right-0 bottom-0 w-3 h-3 border-b-2 border-r-2 border-white opacity-50" />
-  </div>
-);
- 
+
 const Custom = () => {
   const [expandedSection, setExpandedSection] = useState(null);
-  const [activeTab, setActiveTab] = useState(0);
- 
+
   const challenges = [
     {
       title: "Customer Relationship Management",
@@ -53,32 +44,7 @@ const Custom = () => {
     }
   ];
  
-  const steps = [
-    {
-      title: "Reduced disruptions",
-      points: [
-        "Any software malfunction significantly affects overall operations. Our SAP assistance service helps quickly identify the root causes of issues and resolve them swiftly, minimizing the potential negative impacts on business continuity.",
-      ]
-    },
-    {
-      title: "Proactive surveillance",
-      points: [
-        "Our SAP support team employs advanced monitoring tools and strategies to detect potential issues before they escalate into disturbances, thereby preventing downtimes and performance bottlenecks.",
-      ]
-    },
-    {
-      title: "Enhanced system performance",
-      points: [
-        "We help in configuring and optimizing SAP software to reach peak efficiency, boost productivity, and ensure effective operations.",
-      ]
-    },
-    {
-      title: "Always current",
-      points: [
-        "SAP periodically releases updates with new features and fixes. Overlooking them can create complications with post-installation processes. Our SAP support group is consistently informed about new patches and can guarantee the efficient application of updates, keeping businesses at the forefront of advancements.",
-      ]
-    }
-  ];
+
  
   const modules = {
     'Initiation': {
@@ -110,19 +76,15 @@ const Custom = () => {
       points: [
         "Continuous updates on project advancement",
         "Smart budget management",
-        "Effective risk identification and mitigation"
-      ],
-      description: "Following each iteration, we will deliver a strong product increment to the pre-production environment and grant stakeholders authorized access to assess its functionality and provide constructive feedback.",
-      subheading: "As a result, you can:",
-      points: [
+        "Effective risk identification and mitigation",
         "Observe the ongoing enhancement of functionality throughout the development cycle",
         "Stay updated on the project's progress and budget allocation through user-friendly visualizations, comprehensive documentation, and insightful analytics",
         "Gain essential insights into the current situation and future outlook, equipping you to make informed decisions at every step of the journey"
       ]
- 
+
     },
     'Delivery': {
-      description:<b>We launch the product directly onto the specified platform by:</b> ,
+      description: "We launch the product directly onto the specified platform by:",
       points: [
         "Providing all necessary information according to platform specifications",
         "Ensuring compliance with security policies and regulations",
@@ -132,8 +94,7 @@ const Custom = () => {
     },
     'Product Maintenance and Support':
     {
-      description: "We maintain open lines of communication with you post-release to ensure everything operates smoothly as planned. Our product support services include two specific methods:",
-      description:<b>Provision of services under a Support and Maintenance agreement:</b>,
+      description: "We maintain open lines of communication with you post-release to ensure everything operates smoothly as planned. Our product support services include two specific methods: Provision of services under a Support and Maintenance agreement:",
       points:[
         "We assess the necessary support hours, evenly distributing them over the agreed period.",
         "Our specialists will monitor product performance and provide regular updates for your review.",

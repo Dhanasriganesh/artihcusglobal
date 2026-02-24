@@ -75,7 +75,7 @@ const Events = () => {
  
       return () => clearInterval(interval); // Cleanup interval on component unmount or when autoSlide changes
     }
-  }, [selectedImageIndex, autoSlide, selectedEventId]);
+  }, [selectedImageIndex, autoSlide, selectedEventId, events]);
  
   const ImageSlider = ({ images, currentIndex, onClose }) => (
     <motion.div

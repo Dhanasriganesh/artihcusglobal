@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Linkedin, Twitter } from "lucide-react";
-import { FaXTwitter } from "react-icons/fa";
 import ckreddy from "../images/ck-reddy.jpg";
  
 const ProfileCard = () => {

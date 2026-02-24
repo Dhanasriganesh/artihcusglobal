@@ -1,13 +1,10 @@
 import React, { useState } from "react";
 import retail_banner from "../images/fmcg-banner.jpg";
 import retail from "../images/warehouse.jpg";
-import why_retail from "../images/why-retail.jpg";
 import distribution from "../images/warework.jpg";
 import factory from "../images/connect.jpg";
 import simplified from "../images/notes.jpg";
 import supply from "../images/supply.jpg";
-import car from "../images/3d.jpg";
-import deployment from "../images/deployment.jpg";
 import lean from '../images/Lean-and-Nimble-Icon.svg';
 import future from '../images/Future-Ready-Core-Icon.svg';
 import drive from '../images/Drive-Consumer-Intimacy-Icon.svg';

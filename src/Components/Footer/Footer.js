@@ -153,11 +153,11 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className="max-w-7xl mx-auto px-4 mt-3 border-t border-gray-800">
         <div className="text-center text-gray-400 text-sm">
-          <a href="#" className="hover:text-white">Privacy Policy</a>
+          <button className="hover:text-white bg-none border-none cursor-pointer">Privacy Policy</button>
           <span className="mx-2">|</span>
-          <a href="#" className="hover:text-white">Terms and Conditions</a>
+          <button className="hover:text-white bg-none border-none cursor-pointer">Terms and Conditions</button>
           <span className="mx-2">|</span>
-          <a href="#" className="hover:text-white">Sitemap</a>
+          <button className="hover:text-white bg-none border-none cursor-pointer">Sitemap</button>
         </div>
       </div>
     </footer>

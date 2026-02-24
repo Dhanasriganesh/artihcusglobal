@@ -8,12 +8,7 @@ function Newscenter() {
     const storedNews = JSON.parse(localStorage.getItem('news')) || [];
     setNews(storedNews);
   }, []);
- 
-  const getPreviewContent = (content) => {
-    const textContent = content.replace(/<[^>]+>/g, '');
-    return textContent.split(' ').slice(0, 3).join(' ');
-  };
- 
+
   const formatDate = (dateString) => {
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     return new Date(dateString).toLocaleDateString(undefined, options);

@@ -5,8 +5,6 @@ import why_retail from "../images/why-retail.jpg";
 import distribution from "../images/distribution.jpg";
 import factory from "../images/picking-area.jpg";
 import simplified from "../images/simplified.jpg";
-import car from "../images/3d.jpg";
-import deployment from "../images/deployment.jpg";
 import lean from "../images/Lean-and-Nimble-Icon.svg";
 import future from "../images/Future-Ready-Core-Icon.svg";
 import drive from "../images/Drive-Consumer-Intimacy-Icon.svg";

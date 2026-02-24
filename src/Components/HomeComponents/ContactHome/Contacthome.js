@@ -29,7 +29,7 @@ function Contacthome() {
     setSubmitStatus({ type: '', message: '' });
 
     try {
-      const response = await axios.post('http://localhost:5000/send-email/contacthome', formData);
+      await axios.post('http://localhost:5000/send-email/contacthome', formData);
       setSubmitStatus({ 
         type: 'success', 
         message: 'Your message has been sent successfully!' 
