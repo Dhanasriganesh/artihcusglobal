@@ -31,7 +31,6 @@ const Leadership = () => {
  
   const leadershipTeam = [
     { name: "C.K REDDY", title: "Founder CEO, and MD", image: ckreddy, route: "ck-reddy" },
-    { name: "Syama Sundara Reddy", title: "Director and COO", image: syamareddy, route: "syama-reddy" },
     { name: "Nara Muralidhar Reddy", title: "Founder & Director", image: narareddy, route: "nara-reddy" },
     { name: "Hari Reddy Andluru", title: "Head of SAP Competency", image: harireddy, route: "hari-reddy" },
     { name: "Surendra Gondipalli", title: "President, Artihcus Global inc.", image: surendra, route: "surendra-gondipalli" },
